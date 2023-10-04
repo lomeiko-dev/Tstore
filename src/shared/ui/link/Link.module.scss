@@ -1,0 +1,10 @@
+.link{
+  color: var(--text-ref-color);
+  margin: 0 10px;
+
+  transition: .3s color;
+}
+
+.link:hover{
+  color: var(--select-text-ref-color);
+}

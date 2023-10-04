@@ -1,0 +1,21 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+  min-width: 330px;
+}
+
+a{
+  text-decoration: none;
+  color: transparent;
+}
+
+input, button{
+  border: none;
+  background: transparent;
+}

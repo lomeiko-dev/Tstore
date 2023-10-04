@@ -1,0 +1,42 @@
+{
+  "auth": [
+    {
+      "password": "sdgdsgsdgsdgsdg",
+      "username": "sdgdsgsdg",
+      "id": 1
+    },
+    {
+      "password": "ывпвыпвыпвып",
+      "username": "ывпвыпывпывп",
+      "id": 2
+    },
+    {
+      "password": "12345678",
+      "username": "admin",
+      "id": 3
+    }
+  ],
+  "profile": [
+    {
+      "authId": 1,
+      "avatar": "",
+      "nickname": "sdgdsg",
+      "dateBirthday": "2023-10-13",
+      "id": 1
+    },
+    {
+      "authId": 2,
+      "avatar": "",
+      "nickname": "выпывпывп",
+      "dateBirthday": "5124-12-31",
+      "id": 2
+    },
+    {
+      "authId": 3,
+      "avatar": "",
+      "nickname": "admin",
+      "dateBirthday": "0004-04-12",
+      "id": 3
+    }
+  ]
+}

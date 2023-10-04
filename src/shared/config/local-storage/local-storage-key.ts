@@ -1,0 +1,1 @@
+export const authData_key = "authData";

@@ -1,0 +1,13 @@
+@import "normalize";
+@import "vars";
+
+@import "themes/dark";
+@import "themes/dark-purple";
+@import "themes/light";
+
+.app{
+  height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Arial";
+}
