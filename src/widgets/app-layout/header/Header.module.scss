@@ -1,0 +1,16 @@
+:root{
+  --app-header-height: 75px;
+}
+
+.header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  height: var(--app-header-height);
+  padding: 0 10px;
+  background: var(--primary-color);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+}
