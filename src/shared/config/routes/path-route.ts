@@ -3,11 +3,18 @@ enum nameRoute {
     MAIN = "main",
     AUTH = "auth",
     PROFILE = "profile",
+    USERS = "users",
 }
 
-export const pathRoutes: Record<nameRoute, string> = {
-    [nameRoute.MAIN]: "/main",
-    [nameRoute.ABOUT]: "/about",
-    [nameRoute.AUTH]: "/auth",
-    [nameRoute.PROFILE]: "/profile",
+type typeRoute = {
+    config: string,
+    name: string,
+}
+
+export const pathRoutes: Record<nameRoute, typeRoute> = {
+    [nameRoute.MAIN]: {name: "/main", config: "/main"},
+    [nameRoute.ABOUT]: {name: "/about", config: "/about"},
+    [nameRoute.AUTH]: {name: "/auth", config: "auth"},
+    [nameRoute.PROFILE]: {name: "/profile", config: "/profile/:id?"},
+    [nameRoute.USERS]: {name: "/users", config: "/users"}
 }

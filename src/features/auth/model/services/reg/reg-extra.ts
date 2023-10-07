@@ -1,6 +1,6 @@
 import {ActionReducerMapBuilder} from "@reduxjs/toolkit";
 import {IFormAuthScheme} from "../../types/form-auth-scheme.ts";
-import {regThunk} from "features/auth/model/services/reg/reg-thunk.ts";
+import {regThunk} from "../reg/reg-thunk.ts";
 
 export const regExtra = (builder: ActionReducerMapBuilder<IFormAuthScheme>) => {
     builder
@@ -15,5 +15,7 @@ export const regExtra = (builder: ActionReducerMapBuilder<IFormAuthScheme>) => {
         .addCase(regThunk.rejected, (state, action) => {
             state.isLoading = false;
             state.error = action.payload;
+            state.passwordField = "";
+            state.usernameField = "";
         })
 }

@@ -12,7 +12,7 @@ export const RequireAuth: React.FC<IRequireAuth> = ({children}) => {
 
     useEffect(() => {
         if(auth === undefined)
-            navigate(pathRoutes.auth);
+            navigate(pathRoutes.auth.name);
     }, []);
 
     return children;

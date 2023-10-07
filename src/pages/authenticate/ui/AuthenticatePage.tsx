@@ -1,16 +1,14 @@
-import {useState} from "react";
 import classNames from "classnames";
 import style from './AuthenticatePage.module.scss';
 
-import {AuthForm, formAuthReducer} from "features/auth";
 import {DoubleCard} from "shared/ui/double-card";
 import {Button} from "shared/ui/button";
 import {styledText, Text} from "shared/ui/text";
-import {IReducer, ReducerLoader} from "shared/ui/reducer-loader/ReducerLoader.tsx";
+import {IReducer, ReducerLoader} from "shared/ui/reducer-loader";
+import {AuthForm, RegForm, formAuthReducer} from "features/auth";
 
-import {isRegFormSelector, namedFormSelector, textChangeFormSelector} from "../model/selectors/auth-page-selectors.ts";
-import {authPageReducer, toggleForm} from "../model/slice/auth-page-slice.ts";
-
+import {flipSelector, isRegFormSelector, namedFormSelector, textChangeFormSelector, themeSelector} from "../model/selectors/auth-page-selectors.ts";
+import {authPageReducer, toggleFlip, toggleForm} from "../model/slice/auth-page-slice.ts";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch.tsx";
 import {useAppSelector} from "shared/lib/hooks/useAppSelector.tsx";
 
@@ -18,31 +16,34 @@ import content from "../config/content.json";
 
 const reducers: IReducer[] = [
     {storeKey: "formAuthReducer", reducer: formAuthReducer, save: false},
-    {storeKey: "authPageReducer", reducer: authPageReducer, save: false},
+    {storeKey: "authPageReducer", reducer: authPageReducer, save: false}
 ]
 const AuthenticatePage = () => {
-    const [flip, setFlip] = useState(false);
     const dispatch = useAppDispatch();
 
+    const flip = useAppSelector(flipSelector);
     const isRegForm = useAppSelector(isRegFormSelector);
     const namedForm = useAppSelector(namedFormSelector);
     const textChangeForm = useAppSelector(textChangeFormSelector);
+    const theme = useAppSelector(themeSelector);
 
-    const toggleFormHandler = () => {
-        setFlip(prevState => !prevState);
+    const flipFormHandler = () => {
+        dispatch(toggleFlip());
     }
 
-    const mods = {[style.form_reg]: isRegForm}
+    const changeForm = () => {
+        dispatch(toggleForm())
+    }
+
     return (
         <ReducerLoader reducers={reducers}>
             <div className={style.page}>
-                <DoubleCard className={classNames(style.form, mods)} isRotate={flip} changeContent={() => dispatch(toggleForm())}>
-                    <Text className={style.named_form} styled={styledText.TITLE}>{namedForm}</Text>
-                    <AuthForm
-                        isReg={isRegForm}
-                        classNameFields={style.form_fields}
-                        classNameSubmit={style.form_submit}/>
-                    <Button className={style.button_change_form} onClick={toggleFormHandler}>{textChangeForm}</Button>
+                <DoubleCard className={classNames(style.card, style[theme])} isRotate={flip} changeContent={changeForm}>
+                    <Text className={style.text} styled={styledText.TITLE}>{namedForm}</Text>
+                    {isRegForm ?
+                        <RegForm className={style.form}/> :
+                        <AuthForm className={style.form}/>}
+                    <Button className={style.text} onClick={flipFormHandler}>{textChangeForm}</Button>
                 </DoubleCard>
                 <Text className={style.descr} styled={styledText.SUBTITLE}>{content.hello_message}</Text>
             </div>

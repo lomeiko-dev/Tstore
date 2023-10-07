@@ -1,7 +1,7 @@
 import {Suspense} from 'react';
 import {Route, Routes as ReactRoutes} from "react-router-dom";
-import {Routes} from "../lib/Routes.tsx";
 import {RequireAuth} from "./RequireAuth.tsx";
+import {Routes} from "../lib/Routes.tsx";
 
 export const Routing = () => {
     return (

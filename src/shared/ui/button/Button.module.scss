@@ -1,5 +1,31 @@
 .button{
   border-radius: 5px;
+  margin: 5px;
   padding: 5px;
   cursor: pointer;
+}
+
+.field{
+
+}
+.outline{
+  border: 2px solid;
+  background-color: transparent;
+}
+.none{
+  border: none;
+  background: transparent;
+}
+
+.back{
+  background-color: red;
+  color: #fff;
+}
+.submit{
+  background-color: green;
+  color: #fff;
+}
+.default{
+  background-color: var(--primary-button-color);
+  color: var(--primary-text-button-color);
 }

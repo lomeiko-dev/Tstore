@@ -33,6 +33,7 @@ const formAuthSlice = createSlice({
             state.passwordField = "";
             state.nicknameField = "";
             state.dateBirthdayField = "";
+            state.error = undefined;
         }
     },
     extraReducers: (builder) => {

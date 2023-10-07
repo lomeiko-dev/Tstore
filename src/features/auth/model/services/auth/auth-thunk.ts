@@ -1,10 +1,16 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import {IThunk} from "app/providers/store/config/types.ts";
+import {IThunk} from "app/providers/store";
 import {AUTH} from "shared/api/consts.ts";
 import {IAuthData, saveAuthData} from "entities/auth";
+import {NavigateFunction} from "react-router-dom";
+import {pathRoutes} from "shared/config/routes";
 
-export const authThunk = createAsyncThunk<IAuthData, void, IThunk>("auth",
-    async (_, thunkAPI) => {
+interface IAuthThunkProps {
+    navigate: NavigateFunction,
+}
+
+export const authThunk = createAsyncThunk<IAuthData, IAuthThunkProps, IThunk>("auth",
+    async ({navigate}, thunkAPI) => {
         const {
             passwordField = "",
             usernameField = ""
@@ -18,7 +24,7 @@ export const authThunk = createAsyncThunk<IAuthData, void, IThunk>("auth",
                 throw new Error("Имя пользователя, или пароль не верны");
 
             thunkAPI.dispatch(saveAuthData(auth));
-
+            navigate(pathRoutes.profile.name + `/${auth.id}`);
             return auth;
         }
         catch (error){

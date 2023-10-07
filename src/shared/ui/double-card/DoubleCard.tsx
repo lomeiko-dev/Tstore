@@ -18,18 +18,25 @@ export const DoubleCard: React.FC<IDoubleCardProps> = (props) => {
     } = props;
 
     const [anim, setAnim] = useState(false);
+    const [blocked, unBlocked] = useState(true);
 
     useEffect(() => {
-        setAnim(true);
+        if(!blocked){
+            setAnim(true);
 
-        setTimeout(() => {
-            changeContent();
-        }, 500)
+            setTimeout(() => {
+                changeContent();
+            }, 500)
 
-        setTimeout(() => {
-            setAnim(false);
-        }, 1000)
+            setTimeout(() => {
+                setAnim(false);
+            }, 1000)
+        }
     }, [isRotate]);
+
+    useEffect(() => {
+        unBlocked(false);
+    }, []);
 
     const mods = {[style.anim]: anim}
     return (

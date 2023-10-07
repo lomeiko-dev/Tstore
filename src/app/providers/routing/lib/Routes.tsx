@@ -8,30 +8,35 @@ import {ProfilePageLazy} from "pages/profile";
 
 import {AppLayout} from "widgets/app-layout";
 import {DefaultLayout} from "widgets/default-layout";
+import {UsersPageLazy} from "pages/users";
 
-type appRouteProps = RouteProps & {
-    authOnly: boolean;
-}
+type appRouteProps = {authOnly: boolean} & RouteProps;
 
 export const Routes: appRouteProps[] = [
     {
-        path: pathRoutes.main,
+        path: pathRoutes.main.config,
         element: (<AppLayout> <MainPageLazy/> </AppLayout>),
         authOnly: true,
     },
     {
-        path: pathRoutes.about,
+        path: pathRoutes.about.config,
         element: (<AppLayout> <AboutPageLazy/> </AppLayout>),
         authOnly: true,
     },
     {
-        path: pathRoutes.auth,
+        path: pathRoutes.auth.config,
         element: (<DefaultLayout> <AuthenticatePageLazy/> </DefaultLayout>),
         authOnly: false,
     },
     {
-        path: pathRoutes.profile,
+        path: pathRoutes.profile.config,
         element: (<AppLayout> <ProfilePageLazy/> </AppLayout>),
+        authOnly: true,
+
+    },
+    {
+        path: pathRoutes.users.config,
+        element: (<AppLayout> <UsersPageLazy/> </AppLayout>),
         authOnly: true,
     }
 ]

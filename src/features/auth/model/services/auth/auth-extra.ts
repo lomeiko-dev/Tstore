@@ -15,5 +15,7 @@ export const authExtra = (builder: ActionReducerMapBuilder<IFormAuthScheme>) => 
         .addCase(authThunk.rejected, (state, action) => {
             state.isLoading = false;
             state.error = action.payload;
+            state.passwordField = "";
+            state.usernameField = "";
         })
 }

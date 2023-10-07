@@ -1,6 +1,7 @@
-.field{
+.field, .textarea{
   text-align: center;
   padding: 5px;
   user-focus: none;
   outline: none;
+  resize: none;
 }

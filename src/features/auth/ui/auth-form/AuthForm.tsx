@@ -1,79 +1,53 @@
-import React, {useCallback, useEffect} from "react";
-import style from './AuthForm.module.scss';
+import React, {useCallback} from "react";
+import classNames from "classnames";
+import style from '../Auth.module.scss';
+
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch.tsx";
 import {useAppSelector} from "shared/lib/hooks/useAppSelector.tsx";
-
-import {dateBirthdaySelector,errorSelector,isLoadingSelector,nicknameSelector,passwordSelector,usernameSelector} from "../../model/selectors/auth-selectors.ts";
-import { clearAllField, updateDateBirthdayField,updateNicknameField,updatePasswordField,updateUsernameField} from "../../model/slice/form-auth-slice.ts";
-
+import {errorSelector, isLoadingSelector, passwordSelector, usernameSelector} from "../../model/selectors/auth-selectors.ts";
 import {authThunk} from "../../model/services/auth/auth-thunk.ts";
 
 import {styledText, Text} from "shared/ui/text";
 import {Field} from "shared/ui/field";
-import {Button} from "shared/ui/button/Button.tsx";
+import {Button, buttonStyled} from "shared/ui/button";
 import {useNavigate} from "react-router-dom";
-import {pathRoutes} from "shared/config/routes";
-import classNames from "classnames";
-import {regThunk} from "features/auth/model/services/reg/reg-thunk.ts";
+import {AuthContainer} from "features/auth/ui/AuthContainer.tsx";
+import {useHandlers} from "features/auth/lib/useHandlers.tsx";
 
 interface IAuthFormProps {
-    classNameFields?: string,
-    classNameSubmit?: string,
-    isReg: boolean,
+    className?: string,
 }
 
-export const AuthForm: React.FC<IAuthFormProps> = ({classNameFields, classNameSubmit, isReg}) => {
+export const AuthForm: React.FC<IAuthFormProps> = React.memo(({className}) => {
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
 
     const username = useAppSelector(usernameSelector);
     const password = useAppSelector(passwordSelector);
-    const nickname = useAppSelector(nicknameSelector);
-    const dateBirthday = useAppSelector(dateBirthdaySelector);
 
     const isLoading = useAppSelector(isLoadingSelector);
     const error = useAppSelector(errorSelector);
 
-    const navigate = useNavigate();
+    const {updateUsernameHandler, updatePasswordHandler} = useHandlers();
 
-    useEffect(() => {
-        dispatch(clearAllField());
-    }, [error, isReg]);
-
-    const updateUsernameHandler = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(updateUsernameField(e.target.value));
+    const authHandler = useCallback(() => {
+        dispatch(authThunk({navigate}));
     }, [dispatch]);
-
-    const updatePasswordHandler = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(updatePasswordField(e.target.value));
-    }, [dispatch]);
-
-    const updateNicknameHandler = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(updateNicknameField(e.target.value));
-    }, [dispatch]);
-
-    const updateDateBirthdayHandler = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(updateDateBirthdayField(e.target.value));
-    }, [dispatch]);
-
-    const authHandler = useCallback(async () => {
-        const result = await dispatch(isReg ? regThunk() : authThunk())
-            .then(res => res.meta.requestStatus);
-
-        if(result === "fulfilled")
-            navigate(pathRoutes.profile);
-    }, [dispatch, isReg]);
 
     return (
-        <div className={style.form}>
-            {error && <Text styled={styledText.ERROR}>{error}</Text>}
-            <Field className={classNames(style.field, classNameFields)} onChange={updateUsernameHandler} type="text" placeholder="login" value={username}/>
-            <Field className={classNames(style.field, classNameFields)} onChange={updatePasswordHandler} type="password" placeholder="password" value={password}/>
-            {isReg &&
-                <>
-                    <Field className={classNames(style.field, classNameFields)} onChange={updateNicknameHandler} type="text" placeholder="nickname" value={nickname}/>
-                    <Field className={classNames(style.field, classNameFields)} onChange={updateDateBirthdayHandler} type="date" placeholder="birthday" value={dateBirthday}/>
-                </>}
-            <Button className={classNames(style.field, classNameSubmit)} disabled={isLoading} onClick={authHandler}>{isReg ? "Регистрация" : "Авторизация"}</Button>
-        </div>
+        <AuthContainer>
+            <div className={classNames(style.form, className)}>
+                {error && <Text styled={styledText.ERROR}>{error}</Text>}
+                <Field
+                    className={style.field}
+                    onChange={updateUsernameHandler} type="text" placeholder="login" value={username}/>
+                <Field
+                    className={style.field}
+                    onChange={updatePasswordHandler} type="password" placeholder="password" value={password}/>
+                <Button
+                    styled={buttonStyled.FILLED} className={style.field}
+                    disabled={isLoading} onClick={authHandler}>Авторизация</Button>
+            </div>
+        </AuthContainer>
     );
-};
+});

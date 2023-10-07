@@ -1,42 +1,34 @@
 {
   "auth": [
     {
-      "password": "sdgdsgsdgsdgsdg",
-      "username": "sdgdsgsdg",
+      "password": "34129078",
+      "username": "admin",
       "id": 1
     },
     {
-      "password": "ывпвыпвыпвып",
-      "username": "ывпвыпывпывп",
+      "password": "34129078",
+      "username": "user1",
       "id": 2
-    },
-    {
-      "password": "12345678",
-      "username": "admin",
-      "id": 3
     }
   ],
   "profile": [
     {
       "authId": 1,
       "avatar": "",
-      "nickname": "sdgdsg",
-      "dateBirthday": "2023-10-13",
+      "status": "",
+      "description": "",
+      "nickname": "Никита",
+      "dateBirthday": "2023-10-19",
       "id": 1
     },
     {
       "authId": 2,
       "avatar": "",
-      "nickname": "выпывпывп",
-      "dateBirthday": "5124-12-31",
+      "status": "пувыпывпывп",
+      "description": "ывпывпывпывп",
+      "nickname": "Васяя1",
+      "dateBirthday": "2023-10-22",
       "id": 2
-    },
-    {
-      "authId": 3,
-      "avatar": "",
-      "nickname": "admin",
-      "dateBirthday": "0004-04-12",
-      "id": 3
     }
   ]
 }

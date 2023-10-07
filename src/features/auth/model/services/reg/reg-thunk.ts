@@ -1,12 +1,20 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import {IThunk} from "app/providers/store/config/types.ts";
+import {IThunk} from "app/providers/store";
 import {AUTH, PROFILE} from "shared/api/consts.ts";
 import {IAuthData, saveAuthData} from "entities/auth";
-import {isValidUsername} from "features/auth/lib/utils/isValidUsername.ts";
-import {isValidPassword} from "features/auth/lib/utils/isValidPassword.ts";
 
-export const regThunk = createAsyncThunk<IAuthData, void, IThunk>("auth/reg",
-    async (_, thunkAPI) => {
+import {isValidUsername} from "entities/auth";
+import {isValidPassword} from "entities/auth";
+import {isValidNickName} from "entities/profile";
+import {NavigateFunction} from "react-router-dom";
+import {pathRoutes} from "shared/config/routes";
+
+interface IRegThunkProps {
+    navigate: NavigateFunction,
+}
+
+export const regThunk = createAsyncThunk<IAuthData, IRegThunkProps, IThunk>("auth/reg",
+    async ({navigate}, thunkAPI) => {
         const {
             passwordField = "",
             usernameField = "",
@@ -15,8 +23,9 @@ export const regThunk = createAsyncThunk<IAuthData, void, IThunk>("auth/reg",
         } = thunkAPI.getState().formAuthReducer || {};
 
         try {
-            isValidUsername(usernameField);
-            isValidPassword(passwordField);
+            isValidUsername(usernameField, message => {throw new Error(message)});
+            isValidPassword(passwordField, message => {throw new Error(message)});
+            isValidNickName(nicknameField, message => {throw new Error(message)});
 
             const auth = await thunkAPI.extra.api.get<IAuthData[]>(AUTH + `?username=${usernameField}`)
                 .then(res => res.data[0]);
@@ -29,14 +38,17 @@ export const regThunk = createAsyncThunk<IAuthData, void, IThunk>("auth/reg",
                 username: usernameField,
             })
 
-            await thunkAPI.extra.api.post(PROFILE, {
+            const responseProfile = await thunkAPI.extra.api.post(PROFILE, {
                 authId: responseAuth.data.id,
                 avatar: "",
+                status: "",
+                description: "",
                 nickname: nicknameField,
                 dateBirthday: dateBirthdayField,
             });
 
             thunkAPI.dispatch(saveAuthData(responseAuth.data));
+            navigate(pathRoutes.profile.name + `/${responseProfile.data.id}`);
             return responseAuth.data;
         }
         catch (error){
