@@ -1,19 +1,18 @@
-import style from './ProfilePage.module.scss';
 import {useCallback, useEffect, useState} from "react";
+import style from './ProfilePage.module.scss';
 import {useNavigate, useParams} from "react-router-dom";
-
-import {errorSelector, isLoadingSelector, profileReducer} from "entities/profile";
-import {IReducer, ReducerLoader} from "shared/ui/reducer-loader";
-import {FormChangeProfile} from "features/form-profile";
-import {DoubleCard} from "shared/ui/double-card";
-import {ProfileCard} from "./profile-card/ProfileCard.tsx";
-
 import {useAppSelector} from "shared/lib/hooks/useAppSelector.tsx";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch.tsx";
 
-import {profileSelector} from "entities/profile";
-import {uploadProfileThunk} from "entities/profile";
+import {errorSelector, isLoadingSelector, profileReducer, profileSelector, uploadProfileThunk} from "entities/profile";
 import {removeAuthData} from "entities/auth";
+
+import {IReducer, ReducerLoader} from "shared/ui/reducer-loader";
+import {FormChangeProfile} from "features/form-profile";
+import {ProfileCard} from "./profile-card/ProfileCard.tsx";
+import {Panel, styledPanel, typedPanel} from "shared/ui/panel";
+import {Page} from "shared/ui/page";
+
 import {pathRoutes} from "shared/config/routes";
 
 const reducers: IReducer[] = [
@@ -51,8 +50,12 @@ const ProfilePage = () => {
 
     return (
         <ReducerLoader reducers={reducers}>
-            <div className={style.page}>
-                <DoubleCard changeContent={changeProfile} isRotate={flip} className={style.card}>
+            <Page>
+                <Panel
+                    typed={typedPanel.ROUNDED} styled={styledPanel.SHADOW_PANEL}
+                    onChangeContent={changeProfile} isRotate={flip}
+                    className={style.card}>
+
                     {isChange ?
                         <ProfileCard
                             profile={profile}
@@ -61,8 +64,9 @@ const ProfilePage = () => {
                         <FormChangeProfile
                             profile={profile}
                             onClose={onFlipFormHandler}/>}
-                </DoubleCard>
-            </div>
+
+                </Panel>
+            </Page>
         </ReducerLoader>
     );
 };

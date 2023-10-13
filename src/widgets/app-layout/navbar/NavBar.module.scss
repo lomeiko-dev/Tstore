@@ -1,4 +1,13 @@
 .bar{
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  a{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.icon{
+  width: 25px;
+  margin-right: 5px;
 }

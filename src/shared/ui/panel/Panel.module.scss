@@ -1,0 +1,56 @@
+.panel{
+  display: flex;
+  transition: .5s all;
+  background-color: var(--primary-color);
+}
+
+.row{
+  flex-wrap: wrap;
+}
+.grid{
+  flex-direction: column;
+}
+
+.border{
+  border-radius: 0;
+  padding: 10px;
+}
+.rounded{
+  border-radius: 5px;
+  padding: 10px;
+}
+.circle{
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.shadow_panel{
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.blur_panel_light{
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.blur_panel_dark{
+  backdrop-filter: blur(6px);
+  background: rgba(99, 99, 99, 0.35);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.anim_flip{
+  animation: 1s flip;
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

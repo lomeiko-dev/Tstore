@@ -1,12 +1,15 @@
 .button{
   border-radius: 5px;
   margin: 5px;
-  padding: 5px;
+  padding: 5px 15px;
   cursor: pointer;
 }
 
-.field{
-
+.filled{
+  background-color: var(--primary-button-color);
+}
+.circle{
+  border-radius: 50%;
 }
 .outline{
   border: 2px solid;
@@ -15,8 +18,17 @@
 .none{
   border: none;
   background: transparent;
+  color: var(--text-select-color);
 }
 
+.dark{
+  background-color: #333;
+  color: #fff;
+}
+.white{
+  background-color: #fff;
+  color: #333;
+}
 .back{
   background-color: red;
   color: #fff;
@@ -28,4 +40,8 @@
 .default{
   background-color: var(--primary-button-color);
   color: var(--primary-text-button-color);
+}
+
+none{
+  color: var(--primary-button-color);
 }

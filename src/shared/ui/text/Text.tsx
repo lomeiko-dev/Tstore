@@ -12,10 +12,17 @@ export enum styledText {
     WARNING = "warning",
 }
 
+export enum colorText{
+    DEFAULT = "default",
+    LIGHT = "light",
+    DARK = "dark"
+}
+
 interface ITextProps {
     children: React.ReactNode,
     className?: string,
     styled?: styledText,
+    theme?: colorText
 }
 
 export const Text: React.FC<ITextProps> = (props) => {
@@ -23,10 +30,11 @@ export const Text: React.FC<ITextProps> = (props) => {
         children,
         className,
         styled = styledText.TEXT,
+        theme = colorText.DEFAULT
     } = props
 
     return (
-        <div className={classNames(className, style[styled])}>
+        <div className={classNames(style.text_cls, className, style[styled], style[theme])}>
             {children}
         </div>
     );

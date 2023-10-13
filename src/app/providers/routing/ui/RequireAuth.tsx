@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
-import {useAuth} from "entities/auth";
 import {useNavigate} from "react-router-dom";
+import {useAuth} from "entities/auth";
 import {pathRoutes} from "shared/config/routes";
 
 interface IRequireAuth {

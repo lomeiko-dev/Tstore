@@ -1,10 +1,14 @@
 .link{
-  color: var(--text-ref-color);
+  color: var(--text-select-color);
   margin: 0 10px;
+  padding: 0 10px;
+  transition: .5s;
 
-  transition: .3s color;
+  div{
+    font-size: 16px;
+  }
 }
 
 .link:hover{
-  color: var(--select-text-ref-color);
+  color: #333;
 }

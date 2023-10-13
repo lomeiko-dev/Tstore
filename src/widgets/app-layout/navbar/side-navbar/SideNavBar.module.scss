@@ -1,0 +1,44 @@
+.side{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: calc(100vh - var(--app-header-height) - 2px);
+
+  .btn_toggle{
+    bottom: 5%;
+    right: -23%;
+  }
+}
+.closed{
+  left: -160px;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: column;
+  a{
+    margin: 25px 0;
+    font-size: 28px;
+  }
+}
+
+.btn_toggle{
+  display: flex;
+  justify-content: center;
+
+  width: 75px;
+  height: 75px;
+  position: absolute;
+}
+
+@media (max-width: 340px) {
+  .wrapper{
+    width: 150px;
+  }
+}

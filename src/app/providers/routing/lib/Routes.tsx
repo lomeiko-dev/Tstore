@@ -5,10 +5,10 @@ import {MainPageLazy} from "pages/main";
 import {AboutPageLazy} from "pages/about";
 import {AuthenticatePageLazy} from "pages/authenticate";
 import {ProfilePageLazy} from "pages/profile";
+import {UsersPageLazy} from "pages/users";
 
 import {AppLayout} from "widgets/app-layout";
 import {DefaultLayout} from "widgets/default-layout";
-import {UsersPageLazy} from "pages/users";
 
 type appRouteProps = {authOnly: boolean} & RouteProps;
 

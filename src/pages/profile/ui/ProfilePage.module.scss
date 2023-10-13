@@ -1,17 +1,15 @@
-.page{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .card{
-  display: flex;
   justify-content: center;
   align-items: center;
 
   margin: 10px;
-  background: #fff;
-  width: 750px;
-  height: 350px;
-  border-radius: 15px;
+  max-width: 750px;
+  height: 500px;
+  padding: 30px 80px;
+}
+
+@media (max-width: 330px) {
+  .card{
+    max-width: 250px;
+  }
 }

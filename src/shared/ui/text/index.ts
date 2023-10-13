@@ -1,1 +1,1 @@
-export {Text, styledText} from "./Text.tsx";
+export {Text, styledText, colorText} from "./Text.tsx";

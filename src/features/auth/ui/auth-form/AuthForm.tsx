@@ -8,17 +8,20 @@ import {errorSelector, isLoadingSelector, passwordSelector, usernameSelector} fr
 import {authThunk} from "../../model/services/auth/auth-thunk.ts";
 
 import {styledText, Text} from "shared/ui/text";
-import {Field} from "shared/ui/field";
-import {Button, buttonStyled} from "shared/ui/button";
+import {Field, styledField} from "shared/ui/field";
+import {Button, typedButton} from "shared/ui/button";
+
 import {useNavigate} from "react-router-dom";
-import {AuthContainer} from "features/auth/ui/AuthContainer.tsx";
-import {useHandlers} from "features/auth/lib/useHandlers.tsx";
+import {useHandlers} from "../../lib/useHandlers.tsx";
+import {AuthContainer} from "../AuthContainer.tsx";
 
 interface IAuthFormProps {
     className?: string,
+    styledField?: styledField,
+    typedButton?: typedButton,
 }
 
-export const AuthForm: React.FC<IAuthFormProps> = React.memo(({className}) => {
+export const AuthForm: React.FC<IAuthFormProps> = React.memo(({className, styledField, typedButton}) => {
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
 
@@ -40,12 +43,15 @@ export const AuthForm: React.FC<IAuthFormProps> = React.memo(({className}) => {
                 {error && <Text styled={styledText.ERROR}>{error}</Text>}
                 <Field
                     className={style.field}
+                    styled={styledField}
                     onChange={updateUsernameHandler} type="text" placeholder="login" value={username}/>
                 <Field
                     className={style.field}
+                    styled={styledField}
                     onChange={updatePasswordHandler} type="password" placeholder="password" value={password}/>
+
                 <Button
-                    styled={buttonStyled.FILLED} className={style.field}
+                    typed={typedButton} className={style.field}
                     disabled={isLoading} onClick={authHandler}>Авторизация</Button>
             </div>
         </AuthContainer>

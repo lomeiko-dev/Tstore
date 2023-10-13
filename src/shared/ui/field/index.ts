@@ -1,1 +1,1 @@
-export {Field} from "./Field.tsx";
+export {Field, styledField} from "./Field.tsx";

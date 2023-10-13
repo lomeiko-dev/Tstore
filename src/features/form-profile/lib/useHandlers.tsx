@@ -1,7 +1,10 @@
 import React, {useCallback} from "react";
-import {changeAvatar, changeDescription, changeName, changeStatus, setError} from "../model/slice/form-profile-slice.ts";
-import {isValidDescription, isValidNickName, isValidStatus} from "entities/profile";
+import {changeAvatar, changeDescription, changeName, changeStatus} from "../model/slice/form-profile-slice.ts";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch.tsx";
+import {isValidStatus} from "entities/profile/lib/utils/isValidStatus.ts";
+import {isValidNickName} from "entities/profile/lib/utils/isValidNickName.ts";
+import {isValidDescription} from "entities/profile/lib/utils/isValidDescription.ts";
+import {setError} from "../model/slice/form-profile-slice.ts";
 
 export const useHandlers = () => {
     const dispatch = useAppDispatch();
@@ -11,30 +14,27 @@ export const useHandlers = () => {
     }, [dispatch]);
 
     const changeNicknameHandler = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        isValidNickName(e.target.value, message => {
-            dispatch(setError(message));
-        }, () => {
-            dispatch(setError(undefined));
+        const result = isValidNickName(e.target.value);
+        dispatch(setError(result.error));
+
+        if(result.isSuccessfully)
             dispatch(changeName(e.target.value));
-        });
     }, [dispatch]);
 
     const changeStatusHandler = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        isValidStatus(e.target.value, message => {
-            dispatch(setError(message));
-        }, () => {
+        const result = isValidStatus(e.target.value);
+        dispatch(setError(result.error));
+
+        if(result.isSuccessfully)
             dispatch(changeStatus(e.target.value));
-            dispatch(setError(undefined));
-        })
     }, [dispatch]);
 
     const changeDescriptionHandler = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        isValidDescription(e.target.value, message => {
-            dispatch(setError(message));
-        }, () => {
-            dispatch(setError(undefined));
+        const result = isValidDescription(e.target.value);
+        dispatch(setError(result.error));
+
+        if(result.isSuccessfully)
             dispatch(changeDescription(e.target.value));
-        })
     }, [dispatch]);
 
     return {changeAvatarHandler, changeNicknameHandler, changeDescriptionHandler, changeStatusHandler}

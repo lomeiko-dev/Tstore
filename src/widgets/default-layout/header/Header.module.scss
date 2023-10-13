@@ -1,5 +1,5 @@
 :root{
-  --default-header-height: 120px;
+  --default-header-height: 140px;
 }
 
 .header{
@@ -8,4 +8,10 @@
 }
 .title{
   margin-left: 50px;
+}
+
+@media (max-width: 300px) {
+  .title{
+    display: none;
+  }
 }

@@ -2,12 +2,14 @@
 @import "vars";
 
 @import "themes/dark";
-@import "themes/dark-purple";
 @import "themes/light";
 
 .app{
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: var(--bg-color);
   color: var(--text-color);
   font-family: "Arial";
+
+  transition: .5s all;
 }

@@ -1,11 +1,34 @@
 .namespace{
   display: flex;
   align-items: center;
+}
+
+.logo{
+  width: 70px;
+}
+
+.name{
   font-size: 32px;
+  display: flex;
+  align-items: center;
   h1{
     color: #333;
   }
   h2{
     color: #006fff;
+  }
+}
+
+@media (max-width: 300px) {
+  .logo{
+    display: none;
+  }
+}
+
+@media (max-width: 160px) {
+  .namespace{
+    h2{
+      display: none;
+    }
   }
 }

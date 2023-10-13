@@ -8,17 +8,19 @@ import {dateBirthdaySelector, errorSelector, isLoadingSelector, nicknameSelector
 import {regThunk} from "../../model/services/reg/reg-thunk.ts";
 
 import {styledText, Text} from "shared/ui/text";
-import {Field} from "shared/ui/field";
-import {Button, buttonStyled} from "shared/ui/button";
+import {Field, styledField} from "shared/ui/field";
+import {Button, typedButton} from "shared/ui/button";
 import {useNavigate} from "react-router-dom";
 import {AuthContainer} from "../AuthContainer.tsx";
 import {useHandlers} from "features/auth/lib/useHandlers.tsx";
 
 interface IAuthFormProps {
     className?: string,
+    styledField?: styledField,
+    typedButton?: typedButton,
 }
 
-export const RegForm: React.FC<IAuthFormProps> = React.memo(({className}) => {
+export const RegForm: React.FC<IAuthFormProps> = React.memo(({className, styledField, typedButton}) => {
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
 
@@ -27,7 +29,7 @@ export const RegForm: React.FC<IAuthFormProps> = React.memo(({className}) => {
     const nickname = useAppSelector(nicknameSelector);
     const dateBirthday = useAppSelector(dateBirthdaySelector);
 
-    const {updateDateBirthdayHandler, updateNicknameHandler, updatePasswordHandler, updateUsernameHandler}
+    const { updateDateBirthdayHandler, updateNicknameHandler, updatePasswordHandler, updateUsernameHandler }
         = useHandlers();
 
     const isLoading = useAppSelector(isLoadingSelector);
@@ -43,19 +45,23 @@ export const RegForm: React.FC<IAuthFormProps> = React.memo(({className}) => {
                 {error && <Text styled={styledText.ERROR}>{error}</Text>}
                 <Field
                     className={style.field}
+                    styled={styledField}
                     onChange={updateUsernameHandler} type="text" placeholder="login" value={username}/>
                 <Field
                     className={style.field}
+                    styled={styledField}
                     onChange={updatePasswordHandler} type="password" placeholder="password" value={password}/>
                 <Field
                     className={style.field}
+                    styled={styledField}
                     onChange={updateNicknameHandler} type="text" placeholder="nickname" value={nickname}/>
                 <Field
                     className={style.field}
+                    styled={styledField}
                     onChange={updateDateBirthdayHandler} type="date" placeholder="birthday" value={dateBirthday}/>
 
                 <Button
-                    styled={buttonStyled.FILLED} className={style.field}
+                    typed={typedButton} className={style.field}
                     disabled={isLoading} onClick={authHandler}>Регистрация</Button>
             </div>
         </AuthContainer>

@@ -2,13 +2,16 @@ import React from "react";
 import style from './Button.module.scss';
 import classNames from "classnames";
 
-export enum buttonStyled {
+export enum styledButton {
     FILLED = "filled",
-    OUTLINE = "outline",
+    BORDER = "outline",
+    CIRCLE = "circle",
     NONE = "none",
 }
 
-export enum buttonTyped {
+export enum typedButton {
+    WHITE = "white",
+    DARK = "dark",
     BACK = "back",
     SUBMIT = "submit",
     DEFAULT = "default",
@@ -18,16 +21,16 @@ export enum buttonTyped {
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
     children: React.ReactNode;
     className?: string,
-    styled?: buttonStyled,
-    typed?: buttonTyped,
+    styled?: styledButton,
+    typed?: typedButton,
 }
 
 export const Button: React.FC<IButtonProps> = (props) => {
     const {
         children,
         className,
-        styled = buttonStyled.NONE,
-        typed = buttonTyped.NONE,
+        styled = styledButton.NONE,
+        typed = typedButton.NONE,
         ...otherProps
     } = props;
 

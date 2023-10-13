@@ -1,7 +1,39 @@
 .field, .textarea{
   text-align: center;
   padding: 5px;
+  margin: 15px;
   user-focus: none;
   outline: none;
   resize: none;
+
+  transition: .5s all;
+}
+
+.line{
+  border-bottom: 1px solid var(--text-color);
+  color: var(--text-color);
+}
+.line::-webkit-input-placeholder{
+  color: #fff;
+  opacity: .5;
+}
+
+.line_contrast{
+  border-bottom: 1px solid #333;
+  color: #333;
+}
+.line_contrast::-webkit-input-placeholder{
+  color: #333;
+  opacity: .5;
+}
+
+.border{
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+}
+.border_contrast{border: 1px solid #333;}
+
+.filled{
+  background-color: var(--secondary-color);
+  border-radius: 5px;
 }

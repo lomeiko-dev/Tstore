@@ -1,61 +1,47 @@
 .theme_auth{
   --auth-form-bg-color: var(--main-color);
-  --auth-form-primary-color: #fff;
-  --auth-form-contrast-color: #333;
+  --auth-form-content-color: #fff;
 }
 .theme_reg{
   --auth-form-bg-color: #fff;
-  --auth-form-primary-color: #333;
-  --auth-form-contrast-color: #fff;
+  --auth-form-content-color: #333;
 }
 
-.page{
+.content{
+  margin-top: -30px;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  max-width: 1000px;
+  width: 100%;
   height: 100%;
-  min-height: 415px;
+}
 
-  .card {
-    background-color: var(--auth-form-bg-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.card {
+  background-color: var(--auth-form-bg-color);
+  justify-content: center;
+  align-items: center;
 
-    height: 400px;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
+  height: 400px;
+  width: 100%;
+  max-width: 400px;
 
-    .text{
-      color: var(--auth-form-primary-color);
-    }
-
-    .form{
-      input{
-        border-bottom: 2px solid var(--auth-form-primary-color);
-        color: var(--auth-form-primary-color);
-      }
-      input::-webkit-input-placeholder{
-        color: var(--auth-form-primary-color);
-        opacity: .5;
-      }
-      button{
-        background-color: var(--auth-form-primary-color);
-        color: var(--auth-form-contrast-color);
-      }
-    }
+  .text {
+    color: var(--auth-form-content-color);
   }
+}
 
+.descr{
+  overflow: auto;
+  max-width: 600px;
+  max-height: 400px;
+  margin-left: 30px;
+  padding: 30px;
+  border-right: 3px solid var(--main-color);
+}
+
+@media (max-width: 620px) {
   .descr{
-    overflow: auto;
-    max-width: 600px;
-    max-height: 400px;
-    margin-left: 30px;
-    padding: 30px;
-    border-right: 3px solid var(--main-color);
+    display: none;
   }
 }

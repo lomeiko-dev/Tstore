@@ -1,3 +1,7 @@
+.text_cls{
+  transition: .5s;
+}
+
 .namespace{
   font-size: 32px;
   font-weight: 800;
@@ -5,19 +9,23 @@
 .title{
   font-size: 24px;
   font-weight: 600;
+  color: var(--text-select-color);
 }
 .sub_title{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 30px;
+  color: var(--text-color);
 }
 .description{
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
+  color: var(--text-secondary-color);
 }
 .text{
   font-size: 16px;
   font-weight: 400;
+  color: var(--text-color);
 }
 
 .error{
@@ -29,4 +37,12 @@
   font-size: 16px;
   font-weight: 400;
   color: yellow;
+}
+
+.dark{
+  color: #333;
+}
+
+.light{
+  color: #fff;
 }

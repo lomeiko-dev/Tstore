@@ -1,1 +1,1 @@
-export {Button, buttonStyled, buttonTyped} from "./Button.tsx";
+export {Button, styledButton, typedButton} from "./Button.tsx";

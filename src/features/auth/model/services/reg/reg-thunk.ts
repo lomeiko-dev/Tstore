@@ -5,9 +5,9 @@ import {IAuthData, saveAuthData} from "entities/auth";
 
 import {isValidUsername} from "entities/auth";
 import {isValidPassword} from "entities/auth";
-import {isValidNickName} from "entities/profile";
 import {NavigateFunction} from "react-router-dom";
 import {pathRoutes} from "shared/config/routes";
+import {isValidNickName} from "entities/profile";
 
 interface IRegThunkProps {
     navigate: NavigateFunction,
@@ -25,7 +25,11 @@ export const regThunk = createAsyncThunk<IAuthData, IRegThunkProps, IThunk>("aut
         try {
             isValidUsername(usernameField, message => {throw new Error(message)});
             isValidPassword(passwordField, message => {throw new Error(message)});
-            isValidNickName(nicknameField, message => {throw new Error(message)});
+
+            const resultValidNickName = isValidNickName(nicknameField);
+
+            if(!resultValidNickName.isSuccessfully)
+                throw new Error(resultValidNickName.error);
 
             const auth = await thunkAPI.extra.api.get<IAuthData[]>(AUTH + `?username=${usernameField}`)
                 .then(res => res.data[0]);
