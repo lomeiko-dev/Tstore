@@ -14,6 +14,11 @@ type appRouteProps = {authOnly: boolean} & RouteProps;
 
 export const Routes: appRouteProps[] = [
     {
+        path: "/",
+        element: (<AppLayout> <MainPageLazy/> </AppLayout>),
+        authOnly: true,
+    },
+    {
         path: pathRoutes.main.config,
         element: (<AppLayout> <MainPageLazy/> </AppLayout>),
         authOnly: true,
