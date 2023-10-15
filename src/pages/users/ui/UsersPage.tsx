@@ -5,7 +5,15 @@ import {FormSearchedUser} from "features/sorting-users";
 import {IReducer, ReducerLoader} from "shared/ui/reducer-loader";
 import {Page} from "shared/ui/page";
 
-import {sortQuerySelector, totalCountSelector, uploadUsersThunk, userReducer, usersSelector} from "entities/user";
+import {
+    errorSelector,
+    isLoadingSelector,
+    sortQuerySelector,
+    totalCountSelector,
+    uploadUsersThunk,
+    userReducer,
+    usersSelector
+} from "entities/user";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch.tsx";
 import {useAppSelector} from "shared/lib/hooks/useAppSelector.tsx";
 
@@ -17,6 +25,8 @@ const UsersPage = () => {
     const dispatch = useAppDispatch();
 
     const users = useAppSelector(usersSelector);
+    const isLoading = useAppSelector(isLoadingSelector);
+    const error = useAppSelector(errorSelector);
     const totalCount = useAppSelector(totalCountSelector);
 
     const sortQuery = useAppSelector(sortQuerySelector);
@@ -33,11 +43,10 @@ const UsersPage = () => {
         <ReducerLoader reducers={reducers}>
             <Page>
                 <FormSearchedUser/>
-                {users &&
-                    <UserList
-                        data={users}
-                        isShowButton={users?.length < totalCount}
-                        showMoreHandler={uploadUsers}/>}
+                <UserList
+                    isLoading={isLoading} error={error}
+                    data={users} totalCount={totalCount}
+                    showMoreHandler={uploadUsers}/>
             </Page>
         </ReducerLoader>
     );

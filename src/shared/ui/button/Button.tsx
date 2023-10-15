@@ -1,6 +1,7 @@
 import React from "react";
 import style from './Button.module.scss';
 import classNames from "classnames";
+import {Spinner} from "shared/ui/spinner";
 
 export enum styledButton {
     FILLED = "filled",
@@ -23,6 +24,7 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
     className?: string,
     styled?: styledButton,
     typed?: typedButton,
+    disabled?: boolean,
 }
 
 export const Button: React.FC<IButtonProps> = (props) => {
@@ -31,12 +33,14 @@ export const Button: React.FC<IButtonProps> = (props) => {
         className,
         styled = styledButton.NONE,
         typed = typedButton.NONE,
+        disabled,
         ...otherProps
     } = props;
 
     return (
         <button
+            disabled={disabled}
             className={classNames(style.button, className, style[styled], style[typed])}
-            {...otherProps}>{children}</button>
+            {...otherProps}>{disabled ? <Spinner/> : children}</button>
     );
 };

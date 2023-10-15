@@ -54,3 +54,19 @@
     transform: scaleX(1);
   }
 }
+
+.anim_loader{
+  animation: 1.5s loader linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    background-color: var(--primary-color);
+  }
+  50%{
+    background-color: var(--ternary-color);
+  }
+  100%{
+    background-color: var(--primary-color);
+  }
+}

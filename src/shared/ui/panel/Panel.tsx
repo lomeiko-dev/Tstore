@@ -22,13 +22,14 @@ export enum displayPanel{
 }
 
 interface IPanelProps {
-    children: React.ReactNode,
+    children?: React.ReactNode,
     className?: string,
     styled?: styledPanel,
     typed?: typedPanel,
     display?: displayPanel,
     isRotate?: boolean,
     onChangeContent?: () => void,
+    isAnimLoader?: boolean,
 }
 
 export const Panel: React.FC<IPanelProps> = (props) => {
@@ -40,6 +41,7 @@ export const Panel: React.FC<IPanelProps> = (props) => {
         display = displayPanel.GRID,
         isRotate,
         onChangeContent,
+        isAnimLoader = false,
     } = props;
 
     const [anim, setAnim] = useState(false);
@@ -63,11 +65,14 @@ export const Panel: React.FC<IPanelProps> = (props) => {
         unBlocked(false);
     }, []);
 
-    const mods = {[style.anim_flip]: anim}
+    const mods = {
+        [style.anim_flip]: anim,
+        [style.anim_loader]: isAnimLoader,
+    }
 
     return (
         <div className={classNames(style.panel, className, style[styled], style[typed], style[display], mods)}>
-            {children}
+            {!isAnimLoader && <>{children}</>}
         </div>
     );
 };
