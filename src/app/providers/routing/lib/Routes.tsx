@@ -9,6 +9,7 @@ import {UsersPageLazy} from "pages/users";
 
 import {AppLayout} from "widgets/app-layout";
 import {DefaultLayout} from "widgets/default-layout";
+import {NotFoundLazy} from "pages/not-found";
 
 type appRouteProps = {authOnly: boolean} & RouteProps;
 
@@ -43,5 +44,10 @@ export const Routes: appRouteProps[] = [
         path: pathRoutes.users.config,
         element: (<AppLayout> <UsersPageLazy/> </AppLayout>),
         authOnly: true,
+    },
+    {
+        path: pathRoutes.not_found.config,
+        element: (<NotFoundLazy/>),
+        authOnly: false,
     }
 ]

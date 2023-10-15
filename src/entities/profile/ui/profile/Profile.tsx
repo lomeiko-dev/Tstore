@@ -23,7 +23,11 @@ export const Profile: React.FC<IProfileProps> = React.memo(({profile, error, isL
         </div>
 
     if(profile === undefined)
-        return
+        return (
+            <div className={style.profile}>
+                <Text styled={styledText.ERROR}>Профиля не существует</Text>
+            </div>
+        )
 
     return (
         <div className={style.profile}>
