@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {IProfile, IProfileScheme} from "../types/profile-scheme.ts";
-import {uploadProfileThunk} from "entities/profile";
+import {IProfile, IProfileScheme} from "../types/user-scheme.ts";
+import {uploadProfileThunk} from "../services/upload-profile-thunk.ts";
 
 const initialState: IProfileScheme = {
     profile: undefined,

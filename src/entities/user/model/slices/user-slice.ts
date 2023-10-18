@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {IUserScheme} from "../types/user-scheme.ts";
+import {IUserScheme} from "../../../user/model/types/user-scheme.ts";
 import {IProfile} from "entities/profile";
 import {uploadUsersThunk} from "../services/upload-users-thunk.ts";
 

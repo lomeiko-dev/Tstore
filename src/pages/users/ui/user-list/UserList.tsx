@@ -5,7 +5,7 @@ import style from "./UserList.module.scss";
 import {UserCard, UserSkeleton} from "entities/user";
 import {Button, typedButton} from "shared/ui/button";
 import {pathRoutes} from "shared/config/routes";
-import {IProfile} from "entities/profile";
+import {IProfile} from "entities/user";
 import {styledText, Text} from "shared/ui/text";
 
 interface IUserListProps {

@@ -1,4 +1,4 @@
-import {IValidateResult} from "../types/validate-result.ts";
+import {IValidateResult} from "../types/vlidate-result.ts";
 
 export const isValidStatus = (status: string): IValidateResult => {
     if(status.length > 50)

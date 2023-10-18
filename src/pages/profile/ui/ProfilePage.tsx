@@ -4,7 +4,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import {useAppSelector} from "shared/lib/hooks/useAppSelector.tsx";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch.tsx";
 
-import {errorSelector, isLoadingSelector, profileReducer, profileSelector, uploadProfileThunk} from "entities/profile";
+import {errorSelector, isLoadingSelector, profileReducer, profileSelector, uploadProfileThunk} from "entities/user";
 import {removeAuthData} from "entities/auth";
 
 import {IReducer, ReducerLoader} from "shared/ui/reducer-loader";

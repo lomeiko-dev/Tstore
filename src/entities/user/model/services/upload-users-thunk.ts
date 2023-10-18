@@ -1,8 +1,8 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import {IThunk} from "app/providers/store";
-import {IProfile} from "entities/profile";
+import {IProfile} from "entities/user";
 import {PROFILE} from "shared/api/consts.ts";
-import {incrementPage, uploadUsers} from "../slice/user-slice.ts";
+import {incrementPage, uploadUsers} from "../slices/user-slice.ts";
 
 export const uploadUsersThunk = createAsyncThunk<IProfile[], void, IThunk>("users/upload",
     async (_, thunkAPI) => {

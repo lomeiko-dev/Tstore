@@ -1,4 +1,4 @@
-import {IValidateResult} from "../types/validate-result.ts";
+import {IValidateResult} from "../types/vlidate-result.ts";
 
 
 const ERROR_MESSAGE = "Имя не может быть больше 30 символов, или меньше 5";

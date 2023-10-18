@@ -3,9 +3,10 @@ import {AxiosInstance} from "axios";
 import { IAuthScheme } from "entities/auth";
 import {IFormAuthScheme} from "features/auth";
 import {IAuthPageScheme} from "pages/authenticate";
-import {IProfileScheme} from "entities/profile";
+import {IProfileScheme} from "entities/user";
 import {IFormProfileScheme} from "features/form-profile";
 import {IUserScheme} from "entities/user";
+import {IQuizScheme} from "entities/quiz";
 
 export interface IStore {
     authReducer: IAuthScheme,
@@ -15,7 +16,8 @@ export interface IStore {
     authPageReducer?: IAuthPageScheme,
     profileReducer?: IProfileScheme,
     formProfileReducer?: IFormProfileScheme,
-    userReducer?: IUserScheme
+    userReducer?: IUserScheme,
+    quizReducer?: IQuizScheme,
 }
 export type storeKey = keyof IStore;
 

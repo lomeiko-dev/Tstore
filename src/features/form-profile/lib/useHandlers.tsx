@@ -1,9 +1,9 @@
 import React, {useCallback} from "react";
 import {changeAvatar, changeDescription, changeName, changeStatus} from "../model/slice/form-profile-slice.ts";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch.tsx";
-import {isValidStatus} from "entities/profile/lib/utils/isValidStatus.ts";
-import {isValidNickName} from "entities/profile/lib/utils/isValidNickName.ts";
-import {isValidDescription} from "entities/profile/lib/utils/isValidDescription.ts";
+import {isValidStatus} from "entities/user";
+import {isValidNickName} from "entities/user";
+import {isValidDescription} from "entities/user";
 import {setError} from "../model/slice/form-profile-slice.ts";
 
 export const useHandlers = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import style from './ProfileCard.module.scss';
 
-import {IProfileProps, Profile} from "entities/profile";
+import {IProfileProps, Profile} from "entities/user";
 import {Button, typedButton} from "shared/ui/button";
 
 import {useAuth} from "entities/auth";

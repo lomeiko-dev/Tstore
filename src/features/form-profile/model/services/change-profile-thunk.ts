@@ -1,7 +1,7 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import {IThunk} from "app/providers/store";
 import {PROFILE} from "shared/api/consts.ts";
-import {IProfile, uploadProfile} from "entities/profile";
+import {IProfile, uploadProfile} from "entities/user";
 
 export const changeProfileThunk = createAsyncThunk<IProfile, void, IThunk>("change-profile",
     async (_, thunkAPI) => {

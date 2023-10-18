@@ -4,8 +4,8 @@ import style from './Profile.module.scss';
 import {Image, imageStyle} from "shared/ui/image";
 import {styledText, Text} from "shared/ui/text";
 
-import {IProfile} from "../../model/types/profile-scheme.ts";
-import {ProfileSkeleton} from "entities/profile/ui/profile/skeleton/ProfileSkeleton.tsx";
+import {IProfile} from "../../model/types/user-scheme.ts";
+import {ProfileSkeleton} from "./skeleton/ProfileSkeleton.tsx";
 
 export interface IProfileProps {
     profile?: IProfile,
