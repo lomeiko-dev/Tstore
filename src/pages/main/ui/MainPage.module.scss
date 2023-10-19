@@ -1,7 +1,13 @@
-.list{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
+.button_add{
+  margin: 10px;
+  img{
+    width: 40px;
+    transition: .2s;
+  }
+}
 
+.button_add:hover{
+  img{
+    width: 50px;
+  }
 }

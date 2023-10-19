@@ -1,7 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {changeProfileThunk} from "../services/change-profile-thunk.ts";
 import {IFormProfileScheme} from "../types/form-profile.ts";
-import {IProfile} from "entities/profile";
+import {IProfile} from "entities/user";
 
 const initialState: IFormProfileScheme = {
     profileDetails: undefined,

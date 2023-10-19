@@ -10,7 +10,10 @@ export const uploadQuizThunk = createAsyncThunk<IQuiz[], void, IThunk>("quiz/upl
         try {
             const response = await thunkAPI.extra.api.get(QUIZ + `?_page=${page}&_limit=${limit}`);
 
-            thunkAPI.dispatch(uploadQuizzes(response.data));
+            thunkAPI.dispatch(uploadQuizzes({
+                data: response.data,
+                count: response.headers["x-total-count"]
+            }));
             thunkAPI.dispatch(incrementPage());
 
             return response.data;

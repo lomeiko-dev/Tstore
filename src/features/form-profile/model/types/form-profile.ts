@@ -1,4 +1,4 @@
-import {IProfile} from "entities/profile";
+import {IProfile} from "entities/user";
 
 export interface IFormProfileScheme {
     profileDetails: IProfile | undefined

@@ -1,13 +1,13 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {IUserScheme} from "../../../user/model/types/user-scheme.ts";
-import {IProfile} from "entities/profile";
+import {IProfile} from "../types/user-scheme.ts";
 import {uploadUsersThunk} from "../services/upload-users-thunk.ts";
 
 const initialState: IUserScheme = {
     users: undefined,
     sortQuery: "",
     page: 1,
-    limit: 20,
+    limit: 3,
     totalCount: 0,
     isLoading: false,
     error: undefined

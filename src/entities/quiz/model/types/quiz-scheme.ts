@@ -30,8 +30,15 @@ export interface IQuiz {
 
 export interface IQuizScheme {
     quizzes: IQuiz[],
+    totalCount: number,
     page: number,
     limit: number,
     isLoading: boolean,
     error?: string
+}
+
+export interface IQuizDetailsScheme {
+    quiz: IQuiz | undefined,
+    isLoading: boolean,
+    error?: string,
 }

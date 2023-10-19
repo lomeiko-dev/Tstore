@@ -1,7 +1,7 @@
 import React from "react";
 import style from './UserCard.module.scss';
 
-import {IProfile} from "entities/profile";
+import {IProfile} from "entities/user";
 import {Image, imageStyle} from "shared/ui/image";
 import {styledText, Text} from "shared/ui/text";
 import {Button, typedButton} from "shared/ui/button";

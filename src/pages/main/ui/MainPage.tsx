@@ -1,76 +1,50 @@
-import style from './MainPage.module.scss';
-import {QuizCard} from "entities/quiz/ui/quiz-card/QuizCard.tsx";
+import {useEffect, useState} from "react";
+import style from "./MainPage.module.scss";
+import {errorSelector, isLoadingSelector, quizReducer, quizzesSelector, totalCountSelector, uploadQuizThunk} from "entities/quiz";
+import {useAppSelector} from "shared/lib/hooks/useAppSelector.tsx";
+import {useAppDispatch} from "shared/lib/hooks/useAppDispatch.tsx";
+
 import {Page} from "shared/ui/page";
+import {IReducer, ReducerLoader} from "shared/ui/reducer-loader";
+import {QuizList} from "./quiz-list/QuizList.tsx";
+
+import AddTestIcon from "shared/assets/img/icons/add-test.svg";
+import {Button} from "shared/ui/button";
+
+const reducers: IReducer[] = [{storeKey: "quizReducer", reducer: quizReducer, save: false}];
 
 const MainPage = () => {
+    const dispatch = useAppDispatch();
+
+    const quizzes = useAppSelector(quizzesSelector);
+    const totalCount = useAppSelector(totalCountSelector);
+    const isLoading = useAppSelector(isLoadingSelector);
+    const error = useAppSelector(errorSelector);
+
+    const [fetching, setFetching] = useState(true);
+
+    useEffect(() => {
+        if(fetching)
+            dispatch(uploadQuizThunk()).finally(() => setFetching(false));
+    }, [fetching]);
+
+    const fetchingData = () => {
+        const count = quizzes?.length || 0
+        if(count == totalCount)
+            return
+
+        setFetching(true);
+    }
+
     return (
-        <Page>
-            <div className={style.list}>
-                <QuizCard
-                    icon="https://i.ytimg.com/vi/E4uuDg5kbsM/maxresdefault.jpg"
-                    name="Какой ты скибиди туалет"
-                    theme="Туалеты"
-                    description="Узнай какой ты скиби-туалет по 10-ти бальной шкале"
-                    tags="#мем #рофл #скиби_туалет #тик-ток #тренды #смешно #кто_ты"
-                    onClickQuiz={() => null}/>
-                <QuizCard
-                    icon="https://i.ytimg.com/vi/E4uuDg5kbsM/maxresdefault.jpg"
-                    name="Какой ты скибиди туалет"
-                    theme="Туалеты"
-                    description="Узнай какой ты скиби-туалет по 10-ти бальной шкале"
-                    tags="#мем #рофл #скиби_туалет #тик-ток #тренды #смешно #кто_ты"
-                    onClickQuiz={() => null}/>
-                <QuizCard
-                    icon="https://i.ytimg.com/vi/E4uuDg5kbsM/maxresdefault.jpg"
-                    name="Какой ты скибиди туалет"
-                    theme="Туалеты"
-                    description="Узнай какой ты скиби-туалет по 10-ти бальной шкале"
-                    tags="#мем #рофл #скиби_туалет #тик-ток #тренды #смешно #кто_ты"
-                    onClickQuiz={() => null}/>
-                <QuizCard
-                    icon="https://i.ytimg.com/vi/E4uuDg5kbsM/maxresdefault.jpg"
-                    name="Какой ты скибиди туалет"
-                    theme="Туалеты"
-                    description="Узнай какой ты скиби-туалет по 10-ти бальной шкале"
-                    tags="#мем #рофл #скиби_туалет #тик-ток #тренды #смешно #кто_ты"
-                    onClickQuiz={() => null}/>
-                <QuizCard
-                    icon="https://i.ytimg.com/vi/E4uuDg5kbsM/maxresdefault.jpg"
-                    name="Какой ты скибиди туалет"
-                    theme="Туалеты"
-                    description="Узнай какой ты скиби-туалет по 10-ти бальной шкале"
-                    tags="#мем #рофл #скиби_туалет #тик-ток #тренды #смешно #кто_ты"
-                    onClickQuiz={() => null}/>
-                <QuizCard
-                    icon="https://i.ytimg.com/vi/E4uuDg5kbsM/maxresdefault.jpg"
-                    name="Какой ты скибиди туалет"
-                    theme="Туалеты"
-                    description="Узнай какой ты скиби-туалет по 10-ти бальной шкале"
-                    tags="#мем #рофл #скиби_туалет #тик-ток #тренды #смешно #кто_ты"
-                    onClickQuiz={() => null}/>
-                <QuizCard
-                    icon="https://i.ytimg.com/vi/E4uuDg5kbsM/maxresdefault.jpg"
-                    name="Какой ты скибиди туалет"
-                    theme="Туалеты"
-                    description="Узнай какой ты скиби-туалет по 10-ти бальной шкале"
-                    tags="#мем #рофл #скиби_туалет #тик-ток #тренды #смешно #кто_ты"
-                    onClickQuiz={() => null}/>
-                <QuizCard
-                    icon="https://i.ytimg.com/vi/E4uuDg5kbsM/maxresdefault.jpg"
-                    name="Какой ты скибиди туалет"
-                    theme="Туалеты"
-                    description="Узнай какой ты скиби-туалет по 10-ти бальной шкале"
-                    tags="#мем #рофл #скиби_туалет #тик-ток #тренды #смешно #кто_ты"
-                    onClickQuiz={() => null}/>
-                <QuizCard
-                    icon="https://i.ytimg.com/vi/E4uuDg5kbsM/maxresdefault.jpg"
-                    name="Какой ты скибиди туалет"
-                    theme="Туалеты"
-                    description="Узнай какой ты скиби-туалет по 10-ти бальной шкале"
-                    tags="#мем #рофл #скиби_туалет #тик-ток #тренды #смешно #кто_ты"
-                    onClickQuiz={() => null}/>
-            </div>
-        </Page>
+        <ReducerLoader reducers={reducers}>
+            <Page onScrollEnd={fetchingData}>
+                <Button className={style.button_add}>
+                    <img alt="add test" src={AddTestIcon}/>
+                </Button>
+                <QuizList isLoading={isLoading} error={error} data={quizzes}/>
+            </Page>
+        </ReducerLoader>
     );
 };
 

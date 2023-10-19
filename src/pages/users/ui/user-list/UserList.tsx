@@ -16,7 +16,15 @@ interface IUserListProps {
     error?: string,
 }
 
-export const UserList: React.FC<IUserListProps> = (props) => {
+const SkeletonContainer: React.ReactNode = (
+    <>
+        <UserSkeleton/>
+        <UserSkeleton/>
+        <UserSkeleton/>
+    </>
+)
+
+export const UserList: React.FC<IUserListProps> = React.memo((props) => {
     const {
         data,
         totalCount,
@@ -25,21 +33,13 @@ export const UserList: React.FC<IUserListProps> = (props) => {
         showMoreHandler,
     } = props;
 
+    let result: React.ReactNode;
+
     if(isLoading)
-        return (
-            <div className={style.list}>
-                <UserSkeleton/>
-                <UserSkeleton/>
-                <UserSkeleton/>
-            </div>
-        )
+        result = SkeletonContainer;
 
     if(error !== undefined)
-        return (
-            <div className={style.list}>
-                <Text styled={styledText.ERROR}>{error}</Text>
-            </div>
-        )
+        result = <Text styled={styledText.ERROR}>{error}</Text>
 
     if(data === undefined)
         return
@@ -54,8 +54,10 @@ export const UserList: React.FC<IUserListProps> = (props) => {
             {data.map(user =>
                 <UserCard key={user.id} data={user} onShowUser={() => navigateProfileHandler(user.authId)}/>)}
 
+            {result}
+
             {data.length < totalCount &&
                 <Button onClick={showMoreHandler} typed={typedButton.DEFAULT}>Показать ещё</Button>}
         </div>
     );
-};
+});

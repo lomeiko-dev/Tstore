@@ -1,6 +1,8 @@
 import React from "react";
 import style from "./QuizCard.module.scss";
+
 import {IQuizTitle} from "../../model/types/quiz-scheme.ts";
+
 import {Panel, styledPanel, typedPanel} from "shared/ui/panel";
 import {Image, imageStyle} from "shared/ui/image";
 import {styledText, Text} from "shared/ui/text";
@@ -10,7 +12,7 @@ interface IQuizCardProps extends Omit<IQuizTitle, 'id'>{
     onClickQuiz: () => void
 }
 
-export const QuizCard: React.FC<IQuizCardProps> = (props) => {
+export const QuizCard: React.FC<IQuizCardProps> = React.memo((props) => {
     const {
         tags,
         theme,
@@ -30,4 +32,4 @@ export const QuizCard: React.FC<IQuizCardProps> = (props) => {
             <Button className={style.btn} typed={typedButton.DEFAULT} onClick={onClickQuiz}>Перейти</Button>
         </Panel>
     );
-};
+});
