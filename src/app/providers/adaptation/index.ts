@@ -1,1 +1,1 @@
-export {AdaptationProvider} from "./ui/AdaptationProvider.tsx";
+export { AdaptationProvider } from './ui/AdaptationProvider.tsx'

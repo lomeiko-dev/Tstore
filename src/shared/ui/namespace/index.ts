@@ -1,1 +1,1 @@
-export {NamespaceApp} from "./NamespaceApp.tsx";
+export { NamespaceApp } from './NamespaceApp.tsx'

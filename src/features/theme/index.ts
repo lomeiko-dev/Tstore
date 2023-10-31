@@ -1,1 +1,1 @@
-export {ThemeSwitcher} from "./ui/ThemeSwitcher.tsx";
+export { ThemeSwitcher } from './ui/ThemeSwitcher.tsx'

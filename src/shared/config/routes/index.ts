@@ -1,1 +1,1 @@
-export {pathRoutes} from "./path-route.ts"
+export { pathRoutes } from './path-route.ts'

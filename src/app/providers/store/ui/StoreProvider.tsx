@@ -1,15 +1,13 @@
-import React from 'react';
-import {Provider} from "react-redux";
-import {store} from "../config/store.ts";
+import React from 'react'
+import { Provider } from 'react-redux'
+import { store } from '../config/store.ts'
 
 interface IStoreProviderProps {
-    children: React.ReactNode,
+  children: React.ReactNode
 }
 
-export const StoreProvider: React.FC<IStoreProviderProps> = ({children}) => {
-    return (
-        <Provider store={store}>
-            {children}
-        </Provider>
-    );
-};
+export const StoreProvider: React.FC<IStoreProviderProps> = ({ children }) => (
+    <Provider store={store}>
+        {children}
+    </Provider>
+)

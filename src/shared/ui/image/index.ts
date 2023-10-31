@@ -1,1 +1,1 @@
-export {Image, imageStyle} from "./Image.tsx";
+export { Image, imageStyle } from './Image.tsx'

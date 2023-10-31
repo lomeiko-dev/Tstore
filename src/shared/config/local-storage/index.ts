@@ -1,1 +1,1 @@
-export * from "./local-storage-key.ts";
+export * from './local-storage-key.ts'

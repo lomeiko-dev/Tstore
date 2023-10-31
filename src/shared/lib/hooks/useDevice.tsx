@@ -1,6 +1,4 @@
-import {useContext} from 'react';
-import {AdaptationContext} from "shared/config/adaptation";
+import { useContext } from 'react'
+import { AdaptationContext } from 'shared/config/adaptation'
 
-export const useDevice = () => {
-    return useContext(AdaptationContext);
-};
+export const useDevice = () => useContext(AdaptationContext)

@@ -1,1 +1,1 @@
-export {ThemeContext, type typeTheme} from "./theme-context.ts";
+export { ThemeContext, type typeTheme } from './theme-context.ts'

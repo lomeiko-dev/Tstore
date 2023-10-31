@@ -1,3 +1,3 @@
-import {useAppSelector} from "shared/lib/hooks/useAppSelector.tsx";
+import { useAppSelector } from 'shared/lib/hooks/useAppSelector.tsx'
 
-export const useAuth = () => useAppSelector(store => store.authReducer.authData);
+export const useAuth = () => useAppSelector(store => store.authReducer.authData)

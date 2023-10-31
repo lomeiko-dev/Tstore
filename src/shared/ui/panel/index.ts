@@ -1,1 +1,1 @@
-export {Panel, styledPanel, displayPanel, typedPanel} from "./Panel.tsx";
+export { Panel, styledPanel, displayPanel, typedPanel } from './Panel.tsx'

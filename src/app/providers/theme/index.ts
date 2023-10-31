@@ -1,1 +1,1 @@
-export {ThemeProvider} from "./ui/ThemeProvider.tsx";
+export { ThemeProvider } from './ui/ThemeProvider.tsx'

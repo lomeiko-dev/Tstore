@@ -1,2 +1,2 @@
-export const authData_key = "authData";
-export const theme_key = "theme";
+export const AUTH_DATA_KEY = 'authData'
+export const THEME_KEY = 'theme'

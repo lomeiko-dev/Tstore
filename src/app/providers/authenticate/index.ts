@@ -1,1 +1,1 @@
-export {AuthenticateProvider} from "./ui/AuthenticateProvider.tsx";
+export { AuthenticateProvider } from './ui/AuthenticateProvider.tsx'

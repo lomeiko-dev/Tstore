@@ -1,1 +1,1 @@
-export {Field, enumDesign} from "./Field.tsx";
+export { Field, enumDesign } from './Field.tsx'

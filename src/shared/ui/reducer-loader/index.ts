@@ -1,1 +1,1 @@
-export {type IReducer, ReducerLoader} from "./ReducerLoader.tsx";
+export { type IReducer, ReducerLoader } from './ReducerLoader.tsx'

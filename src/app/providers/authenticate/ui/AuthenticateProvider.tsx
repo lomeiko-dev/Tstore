@@ -1,17 +1,18 @@
-import React, {useEffect} from 'react';
-import {useAppDispatch} from "shared/lib/hooks/useAppDispatch.tsx";
-import {initAuthData} from "entities/auth";
+import type React from 'react'
+import { useEffect } from 'react'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
+import { initAuthData } from 'entities/auth'
 
 interface IAuthenticateProviderProps {
-    children: React.ReactNode;
+  children: React.ReactNode
 }
 
-export const AuthenticateProvider: React.FC<IAuthenticateProviderProps> = ({children}) => {
-    const dispatch = useAppDispatch();
+export const AuthenticateProvider: React.FC<IAuthenticateProviderProps> = ({ children }) => {
+  const dispatch = useAppDispatch()
 
-    useEffect(() => {
-        dispatch(initAuthData());
-    }, []);
+  useEffect(() => {
+    dispatch(initAuthData())
+  }, [])
 
-    return children;
-};
+  return children
+}

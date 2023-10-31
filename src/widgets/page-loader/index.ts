@@ -1,1 +1,1 @@
-export {PageLoader} from "./ui/PageLoader.tsx";
+export { PageLoader } from './ui/PageLoader.tsx'
