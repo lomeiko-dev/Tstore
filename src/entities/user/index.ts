@@ -6,10 +6,6 @@ export {isLoadingSelector as isLoadingSelectorProfile, errorSelector as errorSel
 export {usersReset, uploadUsers, incrementPage, userReducer, updateSortQuery} from "./model/slices/user-slice.ts";
 export {uploadProfile, profileReducer} from "./model/slices/profile-slice.ts";
 
-export {isValidDescription} from "./lib/utils/isValidDescription.ts";
-export {isValidNickName} from "./lib/utils/isValidNickName.ts";
-export {isValidStatus} from "./lib/utils/isValidStatus.ts";
-
 export {UserCard} from "./ui/user/UserCard.tsx";
 export {UserSkeleton} from "./ui/user/skeleton/UserSkeleton.tsx";
 export {Profile} from "./ui/profile/Profile.tsx";

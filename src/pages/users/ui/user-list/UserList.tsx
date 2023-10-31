@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import style from "./UserList.module.scss";
 
 import {UserCard, UserSkeleton} from "entities/user";
-import {Button, typedButton} from "shared/ui/button";
+import {TextButton, typedButton} from "shared/ui/text-button";
 import {pathRoutes} from "shared/config/routes";
 import {IProfile} from "entities/user";
 import {styledText, Text} from "shared/ui/text";
@@ -57,7 +57,7 @@ export const UserList: React.FC<IUserListProps> = React.memo((props) => {
             {result}
 
             {data.length < totalCount &&
-                <Button onClick={showMoreHandler} typed={typedButton.DEFAULT}>Показать ещё</Button>}
+                <TextButton onClick={showMoreHandler} typed={typedButton.DEFAULT}>Показать ещё</TextButton>}
         </div>
     );
 });

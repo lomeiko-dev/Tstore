@@ -1,14 +1,14 @@
 import React from "react";
 import style from "./QuizCard.module.scss";
 
-import {IQuizTitle} from "../../model/types/quiz-scheme.ts";
+import {IQuiz} from "../../model/types/quiz-scheme.ts";
 
 import {Panel, styledPanel, typedPanel} from "shared/ui/panel";
 import {Image, imageStyle} from "shared/ui/image";
 import {styledText, Text} from "shared/ui/text";
-import {Button, typedButton} from "shared/ui/button";
+import {TextButton, typedButton} from "shared/ui/text-button";
 
-interface IQuizCardProps extends Omit<IQuizTitle, 'id'>{
+export interface IQuizCardProps extends Omit<IQuiz, 'id' | 'questions' | 'id_user'>{
     onClickQuiz: () => void
 }
 
@@ -29,7 +29,8 @@ export const QuizCard: React.FC<IQuizCardProps> = React.memo((props) => {
             <Text styled={styledText.DESCRIPTION}>{theme}</Text>
             <Text className={style.description} styled={styledText.SUBTITLE}>{description}</Text>
             <Text className={style.tags} styled={styledText.DESCRIPTION}>{tags}</Text>
-            <Button className={style.btn} typed={typedButton.DEFAULT} onClick={onClickQuiz}>Перейти</Button>
+
+            <TextButton className={style.btn} typed={typedButton.DEFAULT} onClick={onClickQuiz}>Перейти</TextButton>
         </Panel>
     );
 });

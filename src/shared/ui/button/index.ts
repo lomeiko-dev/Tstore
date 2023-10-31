@@ -1,1 +1,0 @@
-export {Button, styledButton, typedButton} from "./Button.tsx";

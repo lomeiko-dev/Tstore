@@ -2,8 +2,8 @@ import React from "react";
 import style from './QuizList.module.scss';
 
 import {IQuiz, QuizSkeleton} from "entities/quiz";
-import {QuizCard} from "entities/quiz";
 import {styledText, Text} from "shared/ui/text";
+import {QuizItem} from "pages/main/ui/quiz-list/quiz-item/QuizItem.tsx";
 
 interface IQuizListProps {
     data?: IQuiz[],
@@ -33,7 +33,7 @@ export const QuizList: React.FC<IQuizListProps> = React.memo(({data, error, isLo
 
     return (
         <div className={style.list}>
-            {data.map(item => <QuizCard key={item.id} onClickQuiz={() => null} {...item.title}/>)}
+            {data.map(item => <QuizItem key={item.id} {...item}/>)}
             {result}
         </div>
     );

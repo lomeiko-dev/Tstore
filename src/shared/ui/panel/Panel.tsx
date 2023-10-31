@@ -1,5 +1,5 @@
 import style from './Panel.module.scss';
-import React, {useEffect, useState} from "react";
+import React, {HTMLAttributes, useEffect, useState} from "react";
 import classNames from "classnames";
 
 export enum styledPanel{
@@ -21,7 +21,7 @@ export enum displayPanel{
     GRID = "grid",
 }
 
-interface IPanelProps {
+interface IPanelProps extends HTMLAttributes<HTMLDivElement>{
     children?: React.ReactNode,
     className?: string,
     styled?: styledPanel,
@@ -42,6 +42,7 @@ export const Panel: React.FC<IPanelProps> = (props) => {
         isRotate,
         onChangeContent,
         isAnimLoader = false,
+        ...otherProps
     } = props;
 
     const [anim, setAnim] = useState(false);
@@ -71,7 +72,12 @@ export const Panel: React.FC<IPanelProps> = (props) => {
     }
 
     return (
-        <div className={classNames(style.panel, className, style[styled], style[typed], style[display], mods)}>
+        <div
+            className={classNames(
+                style.panel,
+                className,
+                style[styled], style[typed], style[display],
+                mods)} {...otherProps}>
             {!isAnimLoader && <>{children}</>}
         </div>
     );

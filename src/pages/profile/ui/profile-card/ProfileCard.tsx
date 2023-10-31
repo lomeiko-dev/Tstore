@@ -1,14 +1,20 @@
 import React from "react";
 import style from './ProfileCard.module.scss';
 
-import {IProfileProps, Profile} from "entities/user";
-import {Button, typedButton} from "shared/ui/button";
+import {IProfile, Profile} from "entities/user";
 
 import {useAuth} from "entities/auth";
+import {IconButton} from "shared/ui/icon-button";
 
-interface IProfileCardProps extends IProfileProps{
+import PenIcon from "shared/assets/img/icons/pen.svg?react";
+import logoutIcon from "shared/assets/img/icons/logout.svg?react";
+
+interface IProfileCardProps{
     onChange: () => void,
     logout: () => void,
+    profile?: IProfile,
+    isLoading: boolean,
+    error?: string
 }
 
 export const ProfileCard: React.FC<IProfileCardProps> = (props) => {
@@ -27,10 +33,10 @@ export const ProfileCard: React.FC<IProfileCardProps> = (props) => {
             {authData?.id === profile?.id &&
                 <>
                     {!isLoading &&
-                        <div className={style.btn_block}>
-                            <Button className={style.btn} typed={typedButton.DEFAULT} onClick={onChange}>Изменить</Button>
-                            <Button className={style.btn} typed={typedButton.BACK} onClick={logout}>Выйти</Button>
-                        </div>}
+                        <>
+                            <IconButton className={style.btn_change} defaultStyle={true} onClick={onChange} Icon={PenIcon}/>
+                            <IconButton className={style.btn_logout} onClick={logout} color="red" Icon={logoutIcon}/>
+                        </>}
                 </>}
         </div>
     );

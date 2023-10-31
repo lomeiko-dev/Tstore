@@ -1,0 +1,30 @@
+.button{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.back{
+  background-color: red;
+  color: #fff;
+}
+.back:hover{
+  background-color: #ce0d0d;
+}
+
+.default{
+  background-color: var(--primary-button-color);
+  color: var(--primary-text-button-color);
+  padding: 5px 10px;
+}
+.default:hover{
+  background-color: var(--primary-hover-button-color);
+}
+
+.none{
+  background: transparent;
+  color: var(--primary-button-color);
+}
+.none:hover{
+  color: var(--primary-hover-button-color);
+}

@@ -1,23 +1,28 @@
 .form{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .field{
+  margin: 20px 0;
   width: 500px;
 }
 
-.textarea{
+.multiline_field{
+  margin: 20px 0;
   width: 100%;
   max-width: 500px;
   height: 75px;
 }
 
-.buttons_block{
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
+.back{
+  position: absolute;
+  top: -25px;
+  left: -275px;
+  width: 24px;
+  height: 24px;
 }
 
 @media (max-width: 530px) {

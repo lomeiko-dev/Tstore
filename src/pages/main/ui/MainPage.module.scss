@@ -1,13 +1,24 @@
-.button_add{
-  margin: 10px;
-  img{
-    width: 40px;
-    transition: .2s;
-  }
+
+.link_constructor{
+  position: relative;
+  margin: 40px;
 }
 
-.button_add:hover{
-  img{
-    width: 50px;
-  }
+.icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  transition: .3s;
+}
+.icon:hover{
+  height: 45px;
+  width: 45px;
+  top: -2.5px;
+  left: -2.5px;
+}
+
+.text_test_null{
+  margin-top: 50px;
 }

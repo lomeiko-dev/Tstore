@@ -8,8 +8,8 @@ import {errorSelector, isLoadingSelector, passwordSelector, usernameSelector} fr
 import {authThunk} from "../../model/services/auth/auth-thunk.ts";
 
 import {styledText, Text} from "shared/ui/text";
-import {Field, styledField} from "shared/ui/field";
-import {Button, typedButton} from "shared/ui/button";
+import {Field} from "shared/ui/field";
+import {TextButton} from "shared/ui/text-button";
 
 import {useNavigate} from "react-router-dom";
 import {useHandlers} from "../../lib/useHandlers.tsx";
@@ -17,11 +17,9 @@ import {AuthContainer} from "../AuthContainer.tsx";
 
 interface IAuthFormProps {
     className?: string,
-    styledField?: styledField,
-    typedButton?: typedButton,
 }
 
-export const AuthForm: React.FC<IAuthFormProps> = React.memo(({className, styledField, typedButton}) => {
+export const AuthForm: React.FC<IAuthFormProps> = React.memo(({className}) => {
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
 
@@ -42,17 +40,20 @@ export const AuthForm: React.FC<IAuthFormProps> = React.memo(({className, styled
             <div className={classNames(style.form, className)}>
                 {error && <Text styled={styledText.ERROR}>{error}</Text>}
                 <Field
+                    color="#fff"
+                    placeholderColorScheme="light"
                     className={style.field}
-                    styled={styledField}
                     onChange={updateUsernameHandler} type="text" placeholder="login" value={username}/>
                 <Field
+                    color="#fff"
+                    placeholderColorScheme="light"
                     className={style.field}
-                    styled={styledField}
                     onChange={updatePasswordHandler} type="password" placeholder="password" value={password}/>
 
-                <Button
-                    typed={typedButton} className={style.field}
-                    disabled={isLoading} onClick={authHandler}>Авторизация</Button>
+                <TextButton
+                    className={style.btn}
+                    bgColor="#ffffff"
+                    disabled={isLoading} onClick={authHandler}>Авторизация</TextButton>
             </div>
         </AuthContainer>
     );

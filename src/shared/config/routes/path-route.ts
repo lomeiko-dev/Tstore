@@ -4,6 +4,7 @@ enum nameRoute {
     AUTH = "auth",
     PROFILE = "profile",
     USERS = "users",
+    CONSTRUCTOR_QUIZ = "constructor_quiz",
     NOTFOUND = "not_found",
 }
 
@@ -18,5 +19,6 @@ export const pathRoutes: Record<nameRoute, typeRoute> = {
     [nameRoute.AUTH]: {name: "/auth", config: "auth"},
     [nameRoute.PROFILE]: {name: "/profile", config: "/profile/:id?"},
     [nameRoute.USERS]: {name: "/users", config: "/users"},
+    [nameRoute.CONSTRUCTOR_QUIZ]: {name: "/constructor_quiz", config: "/constructor_quiz"},
     [nameRoute.NOTFOUND]: {name: "*", config: "*"}
 }

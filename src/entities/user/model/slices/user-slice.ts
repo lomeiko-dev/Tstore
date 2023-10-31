@@ -7,7 +7,7 @@ const initialState: IUserScheme = {
     users: undefined,
     sortQuery: "",
     page: 1,
-    limit: 3,
+    limit: 20,
     totalCount: 0,
     isLoading: false,
     error: undefined
@@ -18,7 +18,6 @@ const userSlice = createSlice({
     initialState: initialState,
     reducers: {
         usersReset: (state) => {
-          state.users = undefined;
           state.page = 1;
           state.sortQuery = "";
         },
@@ -27,6 +26,7 @@ const userSlice = createSlice({
             state.totalCount = action.payload.count;
         },
         updateSortQuery: (state, action: PayloadAction<string>) => {
+            state.users = undefined;
             state.sortQuery = action.payload;
         },
         incrementPage: (state) => {

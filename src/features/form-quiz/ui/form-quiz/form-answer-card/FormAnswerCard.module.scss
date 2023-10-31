@@ -1,0 +1,44 @@
+.answer_card{
+  position: relative;
+  background: var(--main-color);
+  margin: 10px 0;
+}
+.answer{
+  margin: 35px 15px 5px 15px;
+  height: 60px;
+}
+
+.checked{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+}
+.checkbox{
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.block_added_img{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.deleted{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.url{
+  margin: 0 15px;
+  width: 780px;
+}
+.add_image{
+  width: 24px;
+  height: 24px;
+}

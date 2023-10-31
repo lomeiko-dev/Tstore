@@ -1,30 +1,26 @@
-export interface IQuizTitle{
-    id: string,
-    name: string,
-    icon: string,
-    description: string,
-    tags: string,
-    theme: string,
-}
-
-export interface IQuestion{
-    id: string,
+export interface IQuizQuestion{
     question: string,
+    url: string,
     illustrations: string[],
     answers: IAnswer[],
 }
 
 export interface IAnswer {
-    id: string,
     isCorrect: boolean,
     answer: string,
+    url: string,
     illustrations: string[],
 }
 
 export interface IQuiz {
     id: string,
-    title: IQuizTitle,
-    questions: IQuestion[],
+    id_user: string,
+    name: string,
+    icon: string,
+    description: string,
+    tags: string,
+    theme: string,
+    questions: IQuizQuestion[],
     dateCreate: string,
 }
 

@@ -3,7 +3,7 @@ import style from './SideNavBar.module.scss';
 import classNames from "classnames";
 import {isMobile} from 'react-device-detect';
 
-import {Button, styledButton, typedButton} from "shared/ui/button";
+import {TextButton, styledButton, typedButton} from "shared/ui/text-button";
 import {NavBar} from "../NavBar.tsx";
 import {displayPanel, Panel, styledPanel} from "shared/ui/panel";
 
@@ -31,12 +31,12 @@ export const SideNavBar = React.memo(() => {
                     {isMobile && <ThemeSwitcher/>}
                 </>}
 
-            <Button
+            <TextButton
                 onClick={toggleSide}
-                styled={styledButton.CIRCLE} typed={typedButton.DEFAULT}
+                typed={typedButton.DEFAULT}
                 className={style.btn_toggle}>
                 <img src={BurgerMenuIcon} alt="toggle"/>
-            </Button>
+            </TextButton>
 
         </Panel>
     );

@@ -1,15 +1,26 @@
 import {useEffect, useState} from "react";
 import style from "./MainPage.module.scss";
-import {errorSelector, isLoadingSelector, quizReducer, quizzesSelector, totalCountSelector, uploadQuizThunk} from "entities/quiz";
+
+import {
+    errorSelector,
+    isLoadingSelector,
+    quizReducer,
+    quizzesSelector,
+    totalCountSelector,
+    uploadQuizThunk
+} from "entities/quiz";
 import {useAppSelector} from "shared/lib/hooks/useAppSelector.tsx";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch.tsx";
 
 import {Page} from "shared/ui/page";
+import {Link} from "shared/ui/link";
 import {IReducer, ReducerLoader} from "shared/ui/reducer-loader";
 import {QuizList} from "./quiz-list/QuizList.tsx";
 
-import AddTestIcon from "shared/assets/img/icons/add-test.svg";
-import {Button} from "shared/ui/button";
+import {pathRoutes} from "shared/config/routes";
+
+import AddTestIcon from "shared/assets/img/icons/add-test.svg?react";
+import {styledText, Text} from "shared/ui/text";
 
 const reducers: IReducer[] = [{storeKey: "quizReducer", reducer: quizReducer, save: false}];
 
@@ -39,10 +50,10 @@ const MainPage = () => {
     return (
         <ReducerLoader reducers={reducers}>
             <Page onScrollEnd={fetchingData}>
-                <Button className={style.button_add}>
-                    <img alt="add test" src={AddTestIcon}/>
-                </Button>
-                <QuizList isLoading={isLoading} error={error} data={quizzes}/>
+                <Link className={style.link_constructor} to={pathRoutes.constructor_quiz.name}>
+                    <AddTestIcon className={style.icon}/>
+                </Link>
+                {quizzes?.length === 0 ? <Text className={style.text_test_null} styled={styledText.TITLE}>Тестов нет</Text> : <QuizList isLoading={isLoading} error={error} data={quizzes}/>}
             </Page>
         </ReducerLoader>
     );

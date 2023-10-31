@@ -1,21 +1,25 @@
 import style from './Field.module.scss';
-import React, {HTMLAttributes} from "react";
+import React, {CSSProperties, HTMLAttributes} from "react";
 import classNames from "classnames";
 
-export enum styledField{
+export enum enumDesign {
     LINE = "line",
-    LINE_CONTRAST = "line_contrast",
-    BORDER = "border",
-    BORDER_CONTRAST = "border_contrast",
-    FILLED = "filled",
+    BOX = "box",
+    NONE = "none",
 }
 
 interface IFiledProps extends HTMLAttributes<HTMLInputElement | HTMLTextAreaElement>{
     className?: string,
     type: "text" | "number" | "email" | "password" | "date" | "search",
+    placeholderColorScheme?: "light" | "dark" | "theme",
+    color?: string,
+    bgColor?: string,
+    isBox?: boolean,
     value?: string | number,
+    center?: boolean,
+    design?: enumDesign,
+    borderRadius?: string,
     multiline?: boolean,
-    styled?: styledField,
 }
 
 export const Field: React.FC<IFiledProps> = (props) => {
@@ -23,15 +27,42 @@ export const Field: React.FC<IFiledProps> = (props) => {
         className,
         type,
         value,
+        isBox = false,
+        placeholderColorScheme = "dark",
+        color = "#333333",
+        bgColor,
         multiline = false,
-        styled = styledField.FILLED,
+        design = enumDesign.NONE,
+        center = false,
+        borderRadius,
         ...otherProps
     } = props;
+
+
+
+    const styles: CSSProperties = {
+        color: color,
+        border: isBox ? `1px solid ${color}` : "none",
+        borderBottom: `1px solid ${color}`,
+        backgroundColor: bgColor,
+        borderRadius: borderRadius,
+    }
+
+    const mods = {[style.centered]: center}
     return (
         <>
             {multiline ?
-                <textarea className={classNames(style.textarea, className, style[styled])} {...otherProps} value={value}/> :
-                <input className={classNames(style.field, className, style[styled])} type={type} {...otherProps} value={value}/>}
+                <textarea
+                    {...otherProps}
+                    style={design === enumDesign.NONE ? styles : {}}
+                    className={classNames(style.field, className, mods, style[placeholderColorScheme], style[design])}
+                    value={value}/> :
+                <input
+                    {...otherProps}
+                    style={design === enumDesign.NONE ? styles : {}}
+                    className={classNames(style.field, className, mods, style[placeholderColorScheme], style[design])}
+                    type={type} value={value}/>}
         </>
+
     );
 };

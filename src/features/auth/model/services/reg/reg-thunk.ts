@@ -7,7 +7,7 @@ import {isValidUsername} from "entities/auth";
 import {isValidPassword} from "entities/auth";
 import {NavigateFunction} from "react-router-dom";
 import {pathRoutes} from "shared/config/routes";
-import {isValidNickName} from "entities/profile";
+import {isValidNickName} from "entities/user";
 
 interface IRegThunkProps {
     navigate: NavigateFunction,

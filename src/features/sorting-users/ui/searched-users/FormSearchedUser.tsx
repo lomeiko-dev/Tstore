@@ -1,10 +1,13 @@
 import React, {useCallback, useState} from "react";
 import style from './FormSearchedUsers.module.scss';
 
-import {Field, styledField} from "shared/ui/field";
-import {Button, typedButton} from "shared/ui/button";
+import {enumDesign, Field} from "shared/ui/field";
 import {updateSortQuery, usersReset} from "entities/user";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch.tsx";
+import {IconButton} from "shared/ui/icon-button";
+
+import SearchedIcon from "shared/assets/img/icons/search.svg?react";
+import ResetIcon from "shared/assets/img/icons/reset.svg?react";
 
 export const FormSearchedUser = () => {
     const dispatch = useAppDispatch();
@@ -27,16 +30,14 @@ export const FormSearchedUser = () => {
     return (
         <div className={style.form}>
             <Field
-                styled={styledField.FILLED}
+                design={enumDesign.BOX}
+                placeholderColorScheme="theme"
                 value={search} onChange={updateSearchField}
                 className={style.field} type="search" placeholder="имя..."/>
 
-            <Button
-                onClick={toggleSearched}
-                typed={typedButton.SUBMIT}>найти</Button>
-            <Button
-                onClick={resetSearched}
-                typed={typedButton.BACK}>сброс</Button>
+            <IconButton className={style.icon} defaultStyle={true} onClick={toggleSearched} Icon={SearchedIcon}/>
+            <IconButton className={style.icon} onClick={resetSearched} Icon={ResetIcon}/>
+
         </div>
     );
 };

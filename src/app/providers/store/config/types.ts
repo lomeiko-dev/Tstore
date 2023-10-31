@@ -7,6 +7,7 @@ import {IProfileScheme} from "entities/user";
 import {IFormProfileScheme} from "features/form-profile";
 import {IUserScheme} from "entities/user";
 import {IQuizDetailsScheme, IQuizScheme} from "entities/quiz";
+import {IFormQuizQuestionsScheme, IFormQuizScheme} from "features/form-quiz";
 
 export interface IStore {
     authReducer: IAuthScheme,
@@ -19,6 +20,8 @@ export interface IStore {
     userReducer?: IUserScheme,
     quizReducer?: IQuizScheme,
     quizDetailsReducer?: IQuizDetailsScheme,
+    formQuizReducer?: IFormQuizScheme,
+    formQuizQuestionReducer?: IFormQuizQuestionsScheme,
 }
 export type storeKey = keyof IStore;
 

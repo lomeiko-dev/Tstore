@@ -21,6 +21,9 @@ const quizSlice = createSlice({
         },
         incrementPage: (state) => {
             state.page += 1;
+        },
+        removeQuiz: (state, action: PayloadAction<string>) => {
+            state.quizzes = state.quizzes.filter(item => item.id !== action.payload);
         }
     },
     extraReducers: (builder) => {
@@ -41,4 +44,4 @@ const quizSlice = createSlice({
 })
 
 export const quizReducer = quizSlice.reducer;
-export const {uploadQuizzes, incrementPage} = quizSlice.actions;
+export const {uploadQuizzes, incrementPage, removeQuiz} = quizSlice.actions;

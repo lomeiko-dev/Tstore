@@ -4,7 +4,7 @@ import {styledText, Text} from "shared/ui/text";
 import {useNavigate} from "react-router-dom";
 import {useCallback} from "react";
 import {pathRoutes} from "shared/config/routes";
-import {Button, typedButton} from "shared/ui/button";
+import {TextButton, typedButton} from "shared/ui/text-button";
 
 const NotFound = () => {
     const navigate = useNavigate();
@@ -15,7 +15,7 @@ const NotFound = () => {
     return (
         <Page className={style.page}>
             <Text styled={styledText.ERROR}>Not found page</Text>
-            <Button onClick={navigateHandler} typed={typedButton.DEFAULT}>Перейти на главную</Button>
+            <TextButton onClick={navigateHandler} typed={typedButton.DEFAULT}>Перейти на главную</TextButton>
         </Page>
     );
 };

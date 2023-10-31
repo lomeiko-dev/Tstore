@@ -12,3 +12,14 @@
   opacity: 0;
   border: 1px solid red;
 }
+
+.page::-webkit-scrollbar {
+  width: 6px;
+}
+.page::-webkit-scrollbar-track {
+  background: transparent;
+}
+.page::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 10px;
+}

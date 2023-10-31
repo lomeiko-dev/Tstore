@@ -1,16 +1,22 @@
 .card{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
-.btn_block{
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.btn_change{
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -100px;
+  right: -50px;
 }
-.btn{
-  width: 150px;
+.btn_logout{
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -100px;
+  left: -50px;
 }
