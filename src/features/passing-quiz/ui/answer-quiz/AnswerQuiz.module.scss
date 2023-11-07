@@ -1,0 +1,27 @@
+.card{
+  margin: 10px;
+  background: var(--main-color);
+
+}
+
+.title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox{
+  width: 24px;
+  height: 24px;
+}
+
+.illustrations{
+  display: flex;
+  width: 100%;
+  max-height: 100px;
+  overflow: auto;
+}
+.image{
+  margin: 10px;
+  width: 92px;
+  height: 92px;
+}

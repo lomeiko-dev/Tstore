@@ -8,6 +8,8 @@ import { type IFormProfileScheme } from 'features/form-profile'
 
 import { type IQuizDetailsScheme, type IQuizScheme } from 'entities/quiz'
 import { type IFormQuizQuestionsScheme, type IFormQuizScheme } from 'features/form-quiz'
+import { type IPassingQuizScheme } from 'features/passing-quiz'
+import { type IResultQuizScheme } from 'entities/result-quiz'
 
 export interface IStore {
   authReducer: IAuthScheme
@@ -22,6 +24,8 @@ export interface IStore {
   quizDetailsReducer?: IQuizDetailsScheme
   formQuizReducer?: IFormQuizScheme
   formQuizQuestionReducer?: IFormQuizQuestionsScheme
+  passingQuizReducer?: IPassingQuizScheme
+  resultQuizReducer?: IResultQuizScheme
 }
 export type storeKey = keyof IStore
 

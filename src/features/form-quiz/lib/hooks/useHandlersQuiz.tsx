@@ -1,10 +1,12 @@
-import { useCallback } from 'react'
 import { type IQuizQuestion } from 'entities/quiz'
 import { setAuthor, setQuestions } from '../../model/slices/form-quiz-slice.ts'
 import { createQuizThunk } from '../../model/services/create-quiz-thunk.ts'
+
+import { useCallback } from 'react'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
 import { useAuth } from 'entities/auth'
 import { useNavigate } from 'react-router-dom'
+
 import { pathRoutes } from 'shared/config/routes'
 
 export const useHandlersQuiz = () => {

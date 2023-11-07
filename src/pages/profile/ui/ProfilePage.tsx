@@ -1,10 +1,16 @@
 import { useCallback, useEffect, useState } from 'react'
 import style from './ProfilePage.module.scss'
+
 import { useNavigate, useParams } from 'react-router-dom'
 import { useAppSelector } from 'shared/lib/hooks/useAppSelector.tsx'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
-
-import { errorSelector, isLoadingSelector, profileReducer, profileSelector, uploadProfileThunk } from 'entities/user'
+import {
+  errorSelectorProfile,
+  isLoadingSelectorProfile,
+  profileReducer,
+  profileSelector,
+  uploadProfileThunk
+} from 'entities/user'
 import { removeAuthData } from 'entities/auth'
 
 import { type IReducer, ReducerLoader } from 'shared/ui/reducer-loader'
@@ -32,8 +38,8 @@ const ProfilePage = () => {
   }, [dispatch, id])
 
   const profile = useAppSelector(profileSelector)
-  const isLoading = useAppSelector(isLoadingSelector)
-  const error = useAppSelector(errorSelector)
+  const isLoading = useAppSelector(isLoadingSelectorProfile)
+  const error = useAppSelector(errorSelectorProfile)
 
   const onFlipFormHandler = useCallback(() => {
     setFlip(prevState => !prevState)

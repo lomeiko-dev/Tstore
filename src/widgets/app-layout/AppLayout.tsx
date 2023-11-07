@@ -5,11 +5,10 @@ import { Header } from './header/Header.tsx'
 interface IAppLayoutProps {
   children: React.ReactNode
 }
-
 export const AppLayout: React.FC<IAppLayoutProps> = ({ children }) => (
     <>
         <Header/>
-        <div className={style.container}>
+        <div id='container' className={style.container}>
             {children}
         </div>
     </>

@@ -18,15 +18,7 @@ export const QuizItem: React.FC<IQuiz> = props => {
 
   return (
       <div className={style.item}>
-          <QuizCard
-				onClickQuiz={() => null}
-				theme={props.theme}
-				icon={props.icon}
-				name={props.name}
-				description={props.description}
-				tags={props.tags}
-				dateCreate={props.dateCreate}/>
-
+          <QuizCard {...props}/>
           {props.id_user === idAuth &&
           <div className={style.button_wrapper}>
               <IconButton color='red' className={style.deleted} Icon={DeleteIcon} onClick={deleteQuizHandler}/>

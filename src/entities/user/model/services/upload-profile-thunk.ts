@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { type IProfile, uploadProfile } from 'entities/user'
+import { type IProfile } from '../types/user-scheme.ts'
+import { uploadProfile } from '../slices/profile-slice.ts'
 import { type IThunk } from 'app/providers/store'
 import { PROFILE } from 'shared/api/consts.ts'
 

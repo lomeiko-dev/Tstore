@@ -37,7 +37,7 @@ export const AdaptationProvider: React.FC<IAdaptationProviderProps> = ({ childre
 
   useEffect(() => {
     resizeHandler()
-  }, [])
+  }, [window.innerWidth])
 
   return (
       <AdaptationContext.Provider value={devices}>

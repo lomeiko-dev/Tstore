@@ -1,0 +1,17 @@
+.card{
+  border-top: green 4px solid;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+}
+
+.title, .percent_passing, .answers_info{
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.text{
+  margin: 0 5px;
+}

@@ -5,6 +5,7 @@ import { enumDesign, Field } from 'shared/ui/field'
 import { styledText, Text } from 'shared/ui/text'
 import { TextButton, typedButton } from 'shared/ui/text-button'
 import { type IReducer, ReducerLoader } from 'shared/ui/reducer-loader'
+import { IconButton } from 'shared/ui/icon-button'
 
 import { useAppSelector } from 'shared/lib/hooks/useAppSelector.tsx'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
@@ -13,14 +14,13 @@ import { useHandlers } from '../lib/useHandlers.tsx'
 import { type IProfile } from 'entities/user'
 import { changeProfileThunk } from '../model/services/change-profile-thunk.ts'
 import {
-  errorsSelector,
+  errorSelector,
   isLoadingSelector,
   profileDetailsSelector
 } from '../model/selectors/form-profile-selectors.ts'
 import { formProfileReducer, setProfile } from '../model/slice/form-profile-slice.ts'
 
 import BackIcon from 'shared/assets/img/icons/back.svg?react'
-import { IconButton } from 'shared/ui/icon-button'
 
 interface IFormChangeProfileProps {
   onClose?: () => void
@@ -36,7 +36,7 @@ export const FormChangeProfile: React.FC<IFormChangeProfileProps> = React.memo((
 
   const profileDetails = useAppSelector(profileDetailsSelector)
   const isLoading = useAppSelector(isLoadingSelector)
-  const errors = useAppSelector(errorsSelector)
+  const errors = useAppSelector(errorSelector)
 
   const { changeDescriptionHandler, changeStatusHandler, changeAvatarHandler, changeNicknameHandler } =
         useHandlers()

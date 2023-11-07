@@ -143,5 +143,224 @@
       "id": 10
     }
   ],
-  "quiz": []
+  "quiz": [
+    {
+      "name": "Паразитология",
+      "theme": "Медицина",
+      "icon": "http://heaclub.ru/tim/f4bf51cb4092153c5148d31e11c80eb8/rasshifrovka-i-normi-analiza-kala-na-parazitov.jpg",
+      "description": "Тест по паразитологии тыры пыры пыры тыры",
+      "tags": "#Паразиты #мед",
+      "dateCreate": "",
+      "questions": [
+        {
+          "question": "Через что можно заразиться гельминтозами",
+          "answers": [
+            {
+              "answer": "Имвазированное мясо свиньи",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "Через кукурузу",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Через домашних животных",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какие стадии опасны для человека",
+          "answers": [
+            {
+              "answer": "Стадия развития",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Циста",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "Личинка",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Возбудителем тениоза является - ...",
+          "answers": [
+            {
+              "answer": "Собака",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Бычий цепинь",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свиной цепинь",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id_user": 9,
+      "id": 1
+    }
+  ],
+  "result_quiz": [
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 1
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 2
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 3
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 4
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 5
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 6
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 7
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 8
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 9
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 10
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 11
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 12
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "id": 13
+    },
+    {
+      "percent_passing": 100,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "id": 14
+    },
+    {
+      "percent_passing": 25,
+      "value_correct_answer": 1,
+      "value_not_correct_answer": 3,
+      "scores": 1,
+      "id_user": 9,
+      "id": 15
+    }
+  ]
 }

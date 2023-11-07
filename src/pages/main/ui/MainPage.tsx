@@ -7,20 +7,20 @@ import {
   quizReducer,
   quizzesSelector,
   totalCountSelector,
-  uploadQuizThunk
+  uploadQuizThunk,
+  limitSelector
 } from 'entities/quiz'
 import { useAppSelector } from 'shared/lib/hooks/useAppSelector.tsx'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
 
 import { Page } from 'shared/ui/page'
 import { Link } from 'shared/ui/link'
+import { styledText, Text } from 'shared/ui/text'
 import { type IReducer, ReducerLoader } from 'shared/ui/reducer-loader'
 import { QuizList } from './quiz-list/QuizList.tsx'
 
 import { pathRoutes } from 'shared/config/routes'
-
 import AddTestIcon from 'shared/assets/img/icons/add-test.svg?react'
-import { styledText, Text } from 'shared/ui/text'
 
 const reducers: IReducer[] = [{ storeKey: 'quizReducer', reducer: quizReducer, save: true }]
 
@@ -29,6 +29,7 @@ const MainPage = () => {
 
   const quizzes = useAppSelector(quizzesSelector)
   const totalCount = useAppSelector(totalCountSelector)
+  const limit = useAppSelector(limitSelector)
   const isLoading = useAppSelector(isLoadingSelector)
   const error = useAppSelector(errorSelector)
 
@@ -44,20 +45,27 @@ const MainPage = () => {
 
   const fetchingData = () => {
     const count = quizzes?.length ?? 0
-    if (count === totalCount) {
+
+    if (count === Number(totalCount))
       return
-    }
 
     setFetching(true)
   }
 
   return (
       <ReducerLoader reducers={reducers}>
-          <Page onScrollEnd={fetchingData}>
+          <Page dynamicPagination={{
+            limit: limit,
+            onScrollEnd: fetchingData,
+            totalCount: totalCount,
+            dataLength: quizzes?.length ?? 0
+          }}>
               <Link className={style.link_constructor} to={pathRoutes.constructor_quiz.name}>
                   <AddTestIcon className={style.icon}/>
               </Link>
-              {quizzes?.length === 0 ? <Text className={style.text_test_null} styled={styledText.TITLE}>Тестов нет</Text> : <QuizList isLoading={isLoading} error={error} data={quizzes}/>}
+              {quizzes?.length === 0 
+                ? <Text className={style.text_test_null} styled={styledText.TITLE}>Тестов нет</Text> 
+                : <QuizList isLoading={isLoading} error={error} data={quizzes}/>}
           </Page>
       </ReducerLoader>
   )

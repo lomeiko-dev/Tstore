@@ -1,7 +1,7 @@
 import type React from 'react'
 import { useCallback } from 'react'
-import { changeAvatar, changeDescription, changeName, changeStatus } from '../model/slice/form-profile-slice.ts'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
+import { changeAvatar, changeDescription, changeName, changeStatus } from '../model/slice/form-profile-slice.ts'
 
 export const useHandlers = () => {
   const dispatch = useAppDispatch()

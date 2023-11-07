@@ -5,7 +5,15 @@ import { FormSearchedUser } from 'features/sorting-users'
 import { type IReducer, ReducerLoader } from 'shared/ui/reducer-loader'
 import { Page } from 'shared/ui/page'
 
-import { errorSelector, isLoadingSelector, sortQuerySelector, totalCountSelector, uploadUsersThunk, userReducer, usersSelector } from 'entities/user'
+import {
+  errorSelector,
+  isLoadingSelector,
+  sortQuerySelector,
+  totalCountSelector,
+  uploadUsersThunk,
+  userReducer,
+  usersSelector
+} from 'entities/user'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
 import { useAppSelector } from 'shared/lib/hooks/useAppSelector.tsx'
 

@@ -1,9 +1,10 @@
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
 import type React from 'react'
+
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
 import { useCallback } from 'react'
 import {
   addAnswer, addAnswerIllustration, changeAnswer,
-  removeAnswer, removeAnswerIllustration, changeAnswerUrl, toggleAnswerCorrect
+  removeAnswer, removeAnswerIllustration, changeAnswerUrl, toggleAnswerCorrect, changeAnswerScore
 } from '../../model/slices/form-quiz-question-slice.ts'
 
 interface IUseHandlersQuizAnswerProps {
@@ -63,5 +64,15 @@ export const useHandlersQuizAnswer = ({ idAnswer, idQuestion }: IUseHandlersQuiz
     }))
   }, [dispatch, idQuestion, idAnswer])
 
-  return { addAnswerHandler, removeAnswerHandler, changeQuizAnswerHandler, changeQuizAnswerUrlHandler, toggleQuizAnswerIsCorrectHandler, addIllustrationHandler, removeIllustrationHandler }
+  const changeQuizAnswerScore = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    if (Number(e.target.value) >= 0) {
+      dispatch(changeAnswerScore({
+        indexQuestion: idQuestion,
+        indexAnswer: idAnswer,
+        value: Number(e.target.value)
+      }))
+    }
+  }, [dispatch, idQuestion, idAnswer])
+
+  return { addAnswerHandler, removeAnswerHandler, changeQuizAnswerHandler, changeQuizAnswerUrlHandler, toggleQuizAnswerIsCorrectHandler, addIllustrationHandler, removeIllustrationHandler, changeQuizAnswerScore }
 }

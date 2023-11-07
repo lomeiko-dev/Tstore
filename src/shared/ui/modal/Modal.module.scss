@@ -1,0 +1,52 @@
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(3, 3, 3, .8);
+  opacity: 0;
+  backdrop-filter: blur(3px);
+  pointer-events: none;
+}
+
+.modal{
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+
+  transition: .3s;
+  transform: scale(0.1);
+}
+
+.open{
+  opacity: 1;
+  z-index: 10;
+  pointer-events: auto;
+  .modal{
+    transform: scale(1);
+  }
+}
+
+.close{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  .icon_close{
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.closed{
+  .modal{
+    transform: scale(0);
+  }
+}

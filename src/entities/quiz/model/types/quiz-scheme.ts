@@ -9,6 +9,7 @@ export interface IAnswer {
   isCorrect: boolean
   answer: string
   url: string
+  score: number
   illustrations: string[]
 }
 

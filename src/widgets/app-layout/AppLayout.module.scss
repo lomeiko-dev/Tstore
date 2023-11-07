@@ -3,5 +3,5 @@
   max-width: 1600px;
   margin: 2px auto 0 auto;
   padding: 0 10px;
-  height: calc(100vh - var(--app-header-height));
+  height: calc(100vh - var(--app-header-height) - 3px);
 }

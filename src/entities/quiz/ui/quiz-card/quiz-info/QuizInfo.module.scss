@@ -1,0 +1,36 @@
+.card{
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 30px;
+  height: 500px;
+}
+.icon{
+  width: 600px;
+  height: 400px;
+}
+.name{
+  margin: 15px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description{
+  margin: 15px 0;
+  max-height: 400px;
+  width: 600px;
+  overflow: auto;
+}
+.tags{
+  color: var(--main-color);
+}
+
+.btn{
+  margin-top: 30px;
+  width: 100%;
+  background: #006fff;
+  color: #fff;
+}
+.btn:hover{
+  background: #006fff80;
+}

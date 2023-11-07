@@ -1,6 +1,7 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import style from './UserList.module.scss'
+
+import { useNavigate } from 'react-router-dom'
 
 import { UserCard, UserSkeleton } from 'entities/user'
 import { TextButton, typedButton } from 'shared/ui/text-button'

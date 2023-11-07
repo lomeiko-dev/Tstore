@@ -7,7 +7,7 @@ export interface IUsePaginationProps {
 }
 
 export const usePagination = ({ callback, wrapperRef, triggerRef }: IUsePaginationProps) => {
-  const observer = useRef<IntersectionObserver | undefined>(null)
+  const observer = useRef<IntersectionObserver | undefined>(undefined)
 
   useEffect(() => {
     const wrapperElement = wrapperRef.current

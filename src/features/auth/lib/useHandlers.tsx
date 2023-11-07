@@ -1,5 +1,6 @@
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
 import type React from 'react'
+
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
 import { useCallback } from 'react'
 import { updateDateBirthdayField, updateNicknameField, updatePasswordField, updateUsernameField } from '../model/slice/form-auth-slice.ts'
 

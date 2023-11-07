@@ -1,6 +1,5 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import { type IQuizDetailsScheme, type IQuiz } from '../types/quiz-scheme.ts'
-import { uploadQuizDetailsThunk } from '../services/upload-quiz-details-thunk.ts'
+import { type IQuiz, IQuizDetailsScheme } from '../types/quiz-scheme.ts'
 
 const initialState: IQuizDetailsScheme = {
   quiz: undefined,
@@ -9,27 +8,12 @@ const initialState: IQuizDetailsScheme = {
 }
 
 const quizDetailsSlice = createSlice({
-  name: 'quiz-details',
+  name: 'quiz',
   initialState,
   reducers: {
-    setQuiz (state, action: PayloadAction<IQuiz>) {
+    setQuiz: (state, action: PayloadAction<IQuiz>) => {
       state.quiz = action.payload
     }
-  },
-  extraReducers (builder) {
-    builder
-      .addCase(uploadQuizDetailsThunk.pending, state => {
-        state.isLoading = true
-        state.error = undefined
-      })
-      .addCase(uploadQuizDetailsThunk.fulfilled, state => {
-        state.isLoading = false
-        state.error = undefined
-      })
-      .addCase(uploadQuizDetailsThunk.rejected, (state, action) => {
-        state.isLoading = false
-        state.error = action.payload
-      })
   }
 })
 

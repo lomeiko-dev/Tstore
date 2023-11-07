@@ -32,5 +32,10 @@ export const quizAnswerIsCorrectSelector = (state: IStore, indexQuestion: number
     ?.questions[indexQuestion]
     .answers[indexAnswer].isCorrect
 
+export const quizAnswerScoreSelector = (state: IStore, indexQuestion: number, indexAnswer: number) =>
+  state.formQuizQuestionReducer
+    ?.questions[indexQuestion]
+    .answers[indexAnswer].score
+
 export const quizQuestionsSelectors = (state: IStore) =>
   state.formQuizQuestionReducer?.questions

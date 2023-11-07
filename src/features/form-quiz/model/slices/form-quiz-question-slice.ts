@@ -1,6 +1,10 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { type IFormQuizQuestionsScheme } from '../types/form-quiz-scheme.ts'
-import { type IPayloadActionAnswer, type IPayloadActionAnswerNonValue, type IPayloadActionQuestion, type IPayloadActionQuestionNonValue } from '../types/payload-action-scheme.ts'
+import {
+  type IPayloadActionAnswer,
+  type IPayloadActionAnswerNonValue,
+  type IPayloadActionQuestion, type IPayloadActionQuestionNonValue 
+} from '../types/payload-action-scheme.ts'
 
 const initialState: IFormQuizQuestionsScheme = {
   questions: []
@@ -36,7 +40,7 @@ const formQuizQuestionSlice = createSlice({
 
     addAnswer (state, action: PayloadAction<IPayloadActionQuestionNonValue>) {
       state.questions[action.payload.index]
-        .answers.push({ answer: '', illustrations: [], isCorrect: false, url: '' })
+        .answers.push({ answer: '', illustrations: [], isCorrect: false, url: '', score: 0 })
     },
     removeAnswer (state, action: PayloadAction<IPayloadActionAnswerNonValue>) {
       state.questions[action.payload.indexQuestion]
@@ -46,6 +50,13 @@ const formQuizQuestionSlice = createSlice({
       state.questions[action.payload.indexQuestion]
         .answers[action.payload.indexAnswer].answer = action.payload.value
     },
+    changeAnswerScore: (state, action: PayloadAction<IPayloadActionAnswer<number>>) => {
+      const answer = state.questions[action.payload.indexQuestion]
+        .answers[action.payload.indexAnswer]
+
+      answer.score = action.payload.value
+      answer.isCorrect = (action.payload.value > 0)
+    },
     changeAnswerUrl (state, action: PayloadAction<IPayloadActionAnswer<string>>) {
       state.questions[action.payload.indexQuestion]
         .answers[action.payload.indexAnswer].url = action.payload.value
@@ -53,6 +64,10 @@ const formQuizQuestionSlice = createSlice({
     toggleAnswerCorrect (state, action: PayloadAction<IPayloadActionAnswerNonValue>) {
       const answer = state.questions[action.payload.indexQuestion]
         .answers[action.payload.indexAnswer]
+
+      if (answer.isCorrect) {
+        answer.score = 0
+      }
 
       answer.isCorrect = !answer.isCorrect
     },
@@ -87,5 +102,6 @@ export const {
   addQuestion,
   changeUrl,
   toggleAnswerCorrect,
-  changeAnswerUrl
+  changeAnswerUrl,
+  changeAnswerScore
 } = formQuizQuestionSlice.actions

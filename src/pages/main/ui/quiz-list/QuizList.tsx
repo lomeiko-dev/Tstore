@@ -19,7 +19,13 @@ const skeletonContainer: React.ReactNode = (
     </>
 )
 
-export const QuizList: React.FC<IQuizListProps> = React.memo(({ data, error, isLoading }) => {
+export const QuizList: React.FC<IQuizListProps> = React.memo((props) => {
+  const {
+    data,
+    error,
+    isLoading
+  } = props
+
   let result: React.ReactNode
 
   if (isLoading) {

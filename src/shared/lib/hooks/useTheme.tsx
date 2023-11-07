@@ -7,7 +7,6 @@ export const useTheme = () => {
 
   const onToggleTheme = useCallback(() => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
-    console.log(newTheme)
     toggleTheme(newTheme)
     localStorage.setItem(THEME_KEY, newTheme)
   }, [theme])

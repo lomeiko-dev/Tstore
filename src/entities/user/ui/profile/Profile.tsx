@@ -14,7 +14,7 @@ export interface IProfileProps {
 }
 
 export const Profile: React.FC<IProfileProps> = React.memo(({ profile, error, isLoading }) => {
-  if (isLoading) {
+  if (isLoading || profile === undefined) {
     return <ProfileSkeleton/>
   }
 
@@ -22,10 +22,6 @@ export const Profile: React.FC<IProfileProps> = React.memo(({ profile, error, is
     return <div className={style.profile}>
         <Text styled={styledText.ERROR}>{error}</Text>
     </div>
-  }
-
-  if (profile === undefined) {
-    return
   }
 
   return (

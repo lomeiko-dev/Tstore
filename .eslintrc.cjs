@@ -41,6 +41,14 @@ module.exports = {
         "@typescript-eslint/triple-slash-reference": "off",
         "@typescript-eslint/strict-boolean-expressions": "off",
         "array-callback-return": "off",
+        "no-trailing-spaces": "off",
+        "@typescript-eslint/no-confusing-void-expression": "off",
+        "@typescript-eslint/prefer-optional-chain": "off",
+        "@typescript-eslint/consistent-type-definitions": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "curly": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "object-shorthand": "off",
         "@typescript-eslint/no-invalid-void-type": "off",
         "react/jsx-indent": [2, 4]
     }

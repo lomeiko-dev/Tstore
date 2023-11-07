@@ -1,28 +1,48 @@
-import React, { type MutableRefObject, useRef } from 'react'
+import React, { HTMLAttributes, useCallback, useEffect, useRef, useState } from 'react'
 import style from './Page.module.scss'
 import classNames from 'classnames'
-import { usePagination } from 'shared/lib/hooks/usePagination.tsx'
 
-interface IPageProps {
-  children: React.ReactNode
-  className?: string
-  onScrollEnd?: () => void
+interface IDynamicPaginationProps {
+  onScrollEnd: () => void
+  dataLength: number
+  totalCount: number
+  limit: number
 }
 
-export const Page: React.FC<IPageProps> = ({ children, className, onScrollEnd }) => {
-  const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>
-  const triggerRef = useRef() as MutableRefObject<HTMLDivElement>
+interface IPageProps extends HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode
+  className?: string
+  dynamicPagination?: IDynamicPaginationProps
+}
 
-  usePagination({
-    callback: onScrollEnd,
-    wrapperRef,
-    triggerRef
-  })
+export const Page: React.FC<IPageProps> = (props) => {
+  const {
+    children,
+    className,
+    dynamicPagination,
+    ...otherProps
+  } = props
+
+  const pageRef = useRef<HTMLDivElement>(null)
+  const [element, setElement] = useState<HTMLDivElement | undefined>(undefined)
+
+  useEffect(() => {
+    if (pageRef.current !== null)
+      setElement(pageRef.current)
+  }, [pageRef, element, setElement])
+
+  const scrollHandler = useCallback(() => {
+    if (dynamicPagination && element) {
+      const { scrollHeight, scrollTop } = element
+      if (scrollHeight - (scrollTop + window.innerHeight) < 100 &&
+          dynamicPagination.dataLength < dynamicPagination.totalCount + dynamicPagination.limit)
+        dynamicPagination.onScrollEnd()
+    }
+  }, [dynamicPagination])
 
   return (
-      <div className={classNames(style.page, className)} ref={wrapperRef}>
+      <div ref={pageRef} {...otherProps} className={classNames(style.page, className)} onScroll={scrollHandler}>
           {children}
-          <div className={style.trigger} ref={triggerRef}/>
       </div>
   )
 }

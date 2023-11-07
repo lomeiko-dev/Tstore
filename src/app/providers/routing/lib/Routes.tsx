@@ -11,6 +11,7 @@ import { AppLayout } from 'widgets/app-layout'
 import { DefaultLayout } from 'widgets/default-layout'
 import { NotFoundLazy } from 'pages/not-found'
 import { ConstructorQuizPageLazy } from 'pages/constructor-quiz'
+import { QuizPageLazy } from 'pages/quiz'
 
 type appRouteProps = { authOnly: boolean } & RouteProps
 
@@ -49,6 +50,11 @@ export const Routes: appRouteProps[] = [
   {
     path: pathRoutes.constructor_quiz.config,
     element: (<AppLayout> <ConstructorQuizPageLazy/> </AppLayout>),
+    authOnly: true
+  },
+  {
+    path: pathRoutes.quiz.config,
+    element: (<AppLayout> <QuizPageLazy/> </AppLayout>),
     authOnly: true
   },
   {

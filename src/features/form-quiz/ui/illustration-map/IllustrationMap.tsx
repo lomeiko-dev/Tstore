@@ -12,7 +12,7 @@ interface IIllustrationMapProps {
   color?: string
 }
 
-export const IllustrationMap: React.FC<IIllustrationMapProps> = props => {
+export const IllustrationMap: React.FC<IIllustrationMapProps> = React.memo((props) => {
   const {
     illustrations,
     onDeleted,
@@ -30,4 +30,4 @@ export const IllustrationMap: React.FC<IIllustrationMapProps> = props => {
               </div>)}
       </div>
   )
-}
+})

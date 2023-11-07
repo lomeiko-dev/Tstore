@@ -10,7 +10,13 @@ import { Text } from 'shared/ui/text'
 
 import { useHandlersQuizAnswer } from '../../../lib/hooks/useHandlersQuizAnswer.tsx'
 import { useAppSelector } from 'shared/lib/hooks/useAppSelector.tsx'
-import { quizAnswerIllustrationSelector, quizAnswerIsCorrectSelector, quizAnswerSelector, quizAnswerUrlSelector } from '../../../model/selectors/form-quiz-questions-selectors.ts'
+import {
+  quizAnswerIllustrationSelector,
+  quizAnswerIsCorrectSelector,
+  quizAnswerScoreSelector,
+  quizAnswerSelector,
+  quizAnswerUrlSelector
+} from '../../../model/selectors/form-quiz-questions-selectors.ts'
 
 import AddImageIcon from 'shared/assets/img/icons/add-image.svg?react'
 import TrashIcon from 'shared/assets/img/icons/trash.svg?react'
@@ -27,7 +33,8 @@ export const FormAnswerCard: React.FC<IFormAnswerCardProps> = React.memo(({ inde
     changeQuizAnswerHandler,
     addIllustrationHandler,
     removeIllustrationHandler,
-    toggleQuizAnswerIsCorrectHandler
+    toggleQuizAnswerIsCorrectHandler,
+    changeQuizAnswerScore
   } = useHandlersQuizAnswer({ idAnswer: indexAnswer, idQuestion: indexQuestion })
 
   const answer = useAppSelector(state =>
@@ -42,11 +49,16 @@ export const FormAnswerCard: React.FC<IFormAnswerCardProps> = React.memo(({ inde
   const illustrations = useAppSelector(state =>
     quizAnswerIllustrationSelector(state, indexQuestion, indexAnswer))
 
+  const score = useAppSelector(state =>
+    quizAnswerScoreSelector(state, indexQuestion, indexAnswer))
+
   return (
       <Panel className={style.answer_card} typed={typedPanel.ROUNDED} display={displayPanel.GRID}>
           <div className={style.checked}>
               <CheckBox checked={isCorrect} onChange={toggleQuizAnswerIsCorrectHandler} className={style.checkbox}/>
               <Text fontSize={14} color='#fff'>верный ответ?</Text>
+              <Field onChange={changeQuizAnswerScore} value={score} className={style.score} isBox={true} type={'number'} color="#ffffff"/>
+              <Text fontSize={14} color='#fff'>Баллы за ответ</Text>
           </div>
 
           <Field

@@ -1,7 +1,7 @@
 import style from './FormQuiz.module.scss'
 
 import { useAppSelector } from 'shared/lib/hooks/useAppSelector.tsx'
-import { useHandlersQuiz } from 'features/form-quiz/lib/hooks/useHandlersQuiz.tsx'
+import { useHandlersQuiz } from '../../lib/hooks/useHandlersQuiz.tsx'
 import { useHandlersQuizQuestion } from '../../lib/hooks/useHandlersQuizQuestion.tsx'
 
 import { quizQuestionsSelectors } from '../../model/selectors/form-quiz-questions-selectors.ts'
@@ -16,8 +16,9 @@ import { displayPanel, Panel, styledPanel, typedPanel } from 'shared/ui/panel'
 
 import BackIcon from 'shared/assets/img/icons/back.svg?react'
 import AddQuestionIcon from 'shared/assets/img/icons/add-question.svg?react'
+import React from 'react'
 
-export const FormQuiz = () => {
+export const FormQuiz = React.memo(() => {
   const questions = useAppSelector(quizQuestionsSelectors)
   const { addQuestionHandle } = useHandlersQuizQuestion({ id: 0 })
   const { createQuizHandler, backHandler } = useHandlersQuiz()
@@ -55,4 +56,4 @@ export const FormQuiz = () => {
           </Panel>
       </>
   )
-}
+})

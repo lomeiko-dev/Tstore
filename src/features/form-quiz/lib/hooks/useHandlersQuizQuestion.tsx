@@ -1,5 +1,6 @@
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
 import type React from 'react'
+
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
 import { useCallback } from 'react'
 import {
   addIllustration,
@@ -48,5 +49,12 @@ export const useHandlersQuizQuestion = ({ id }: IUseHandlersQuiQuestionProps) =>
     }))
   }, [dispatch, id])
 
-  return { updateQuizQuestionHandler, updateQuizQuestionUrlHandler, addIllustrationHandler, removeIllustrationHandler, addQuestionHandle, removeQuestionHandle }
+  return {
+    updateQuizQuestionHandler,
+    updateQuizQuestionUrlHandler,
+    addIllustrationHandler,
+    removeIllustrationHandler,
+    addQuestionHandle,
+    removeQuestionHandle
+  }
 }

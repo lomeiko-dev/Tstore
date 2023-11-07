@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { type IThunk } from 'app/providers/store'
-import { type IProfile } from 'entities/user'
+import { type IProfile } from '../types/user-scheme.ts'
 import { PROFILE } from 'shared/api/consts.ts'
 import { incrementPage, uploadUsers } from '../slices/user-slice.ts'
 

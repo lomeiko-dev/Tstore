@@ -4,7 +4,7 @@ import { type IThunk } from 'app/providers/store'
 import { QUIZ } from 'shared/api/consts.ts'
 import { incrementPage, uploadQuizzes } from '../slice/quiz-slice.ts'
 
-export const uploadQuizThunk = createAsyncThunk<IQuiz[], never, IThunk>('quiz/upload',
+export const uploadQuizThunk = createAsyncThunk<IQuiz[], void, IThunk>('quiz/upload',
   async (_, thunkAPI) => {
     const { page, limit } = thunkAPI.getState().quizReducer ?? {}
     try {
