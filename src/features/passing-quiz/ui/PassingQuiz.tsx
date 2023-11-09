@@ -16,7 +16,7 @@ import { useAppSelector } from 'shared/lib/hooks/useAppSelector.tsx'
 import { indexQuestionSelector, questionResultSelector } from '../model/selectors/passing-quiz-selector.ts'
 import { decrementIndexQuestion, incrementIndexQuestion, initQuestion } from '../model/slice/passing-quiz-slice.ts'
 
-import { compareAnswers } from '../lib/compareAnswers.ts'
+import { compareAnswers, initialResult } from '../lib/compareAnswers.ts'
 import { createResultQuizThunk, errorSelector, IResultQuiz, isLoadingSelector, ResultInfo } from 'entities/result-quiz'
 
 import { pathRoutes } from 'shared/config/routes'
@@ -48,8 +48,7 @@ export const PassingQuiz: React.FC<IPassingQuizProps> = (props) => {
   const isLoadingResult = useAppSelector(isLoadingSelector)
 
   const [showModal, setShowModal] = useState(false)
-  const [contentModal, setContentModal] =
-      useState<IResultQuiz>({ id_user: '', percent_passing: 0, scores: 0, value_not_correct_answer: 0, value_correct_answer: 0 })
+  const [contentModal, setContentModal] = useState<IResultQuiz>(initialResult)
 
   useEffect(() => {
     dispatch(initQuestion(questions))
@@ -57,7 +56,7 @@ export const PassingQuiz: React.FC<IPassingQuizProps> = (props) => {
 
   const nextQuestion = useCallback(() => {
     if (indexQuestion === questions.length - 1) {
-      const result = compareAnswers({ questions: questions, questionAnswers: questionResult })
+      const result = compareAnswers({ questions: questions, questionAnswers: questionResult, nameTest: quizName ?? 'Не известно' })
 
       if (result.result) {
         setContentModal(result.result)
@@ -102,7 +101,7 @@ export const PassingQuiz: React.FC<IPassingQuizProps> = (props) => {
           </Panel>
 
           <Modal onClosed={backHandler} isShow={showModal}>
-              <ResultInfo isLoading={isLoadingResult} error={errorResult} nameTest={quizName ?? ''} {...contentModal}/>
+              <ResultInfo isLoading={isLoadingResult} error={errorResult} {...contentModal}/>
               <TextButton className={style.btn} typed={typedButton.DEFAULT} onClick={backHandler}>На главную</TextButton>
           </Modal>
       </div>)

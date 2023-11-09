@@ -20,9 +20,17 @@ import { Panel, styledPanel, typedPanel } from 'shared/ui/panel'
 import { Page } from 'shared/ui/page'
 
 import { pathRoutes } from 'shared/config/routes'
+import {
+  resultQuizReducer,
+  resultQuizSelector,
+  totalCountSelector,
+  uploadResultQuizThunk
+} from 'entities/result-quiz'
+import { ResultList } from 'pages/profile/ui/result-list/ResultList.tsx'
 
 const reducers: IReducer[] = [
-  { storeKey: 'profileReducer', reducer: profileReducer, save: true }
+  { storeKey: 'profileReducer', reducer: profileReducer, save: true },
+  { storeKey: 'resultQuizReducer', reducer: resultQuizReducer, save: true }
 ]
 
 const ProfilePage = () => {
@@ -33,9 +41,25 @@ const ProfilePage = () => {
   const { id = '' } = useParams()
   const navigate = useNavigate()
 
+  const [fetchingResult, setFetchingResult] = useState(false)
+
+  const uploadResults = () => {
+    dispatch(uploadResultQuizThunk(id))
+  }
+
   useEffect(() => {
     dispatch(uploadProfileThunk(id))
+    uploadResults()
   }, [dispatch, id])
+
+  useEffect(() => {
+    if (fetchingResult)
+      dispatch(uploadResultQuizThunk(id))
+        .finally(() => setFetchingResult(false))
+  }, [fetchingResult, id])
+
+  const results = useAppSelector(resultQuizSelector)
+  const totalCount = useAppSelector(totalCountSelector)
 
   const profile = useAppSelector(profileSelector)
   const isLoading = useAppSelector(isLoadingSelectorProfile)
@@ -56,7 +80,11 @@ const ProfilePage = () => {
 
   return (
       <ReducerLoader reducers={reducers}>
-          <Page>
+          <Page dynamicPagination={{
+            totalCount: totalCount,
+            onScrollEnd: () => setFetchingResult(true),
+            dataLength: results.length 
+          }}>
               <Panel
 					typed={typedPanel.ROUNDED} styled={styledPanel.SHADOW_PANEL}
 					onChangeContent={changeProfile} isRotate={flip}
@@ -72,6 +100,7 @@ const ProfilePage = () => {
 							onClose={onFlipFormHandler}/>}
 
               </Panel>
+              <ResultList results={results}/>
           </Page>
       </ReducerLoader>
   )

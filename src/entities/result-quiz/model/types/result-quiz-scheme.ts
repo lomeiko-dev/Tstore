@@ -4,6 +4,7 @@ export interface IResultQuiz {
   value_correct_answer: number
   value_not_correct_answer: number
   scores: number
+  nameTest: string
 }
 
 export interface IResultQuizScheme {

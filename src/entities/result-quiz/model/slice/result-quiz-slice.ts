@@ -5,7 +5,7 @@ import { createResultQuizThunk } from '../services/create-result-quiz-thunk.ts'
 
 const initialState: IResultQuizScheme = {
   results: [],
-  limit: 20,
+  limit: 10,
   page: 1,
   totalCount: 0,
   isLoading: false,

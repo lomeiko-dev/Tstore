@@ -6,6 +6,7 @@ import { getValueCorrectAnswer } from '../lib/getValueCorrectAnswer.ts'
 interface ICompareAnswersProps {
   questions: IQuizQuestion[]
   questionAnswers: questionResult[]
+  nameTest: string
 }
 
 interface ICompareAnswersResult {
@@ -13,14 +14,23 @@ interface ICompareAnswersResult {
   error?: string
 }
 
+export const initialResult: IResultQuiz = {
+  percent_passing: 0,
+  value_correct_answer: 0,
+  value_not_correct_answer: 0,
+  scores: 0,
+  id_user: '',
+  nameTest: ''
+}
+
 export const compareAnswers = (props: ICompareAnswersProps): ICompareAnswersResult => {
   const {
     questionAnswers,
-    questions
+    questions,
+    nameTest
   } = props
 
-  const result: IResultQuiz =
-        { percent_passing: 0, value_correct_answer: 0, value_not_correct_answer: 0, scores: 0, id_user: '' }
+  const result: IResultQuiz = initialResult
 
   const valueCorrectAnswer = getValueCorrectAnswer(questions)
 
@@ -41,6 +51,8 @@ export const compareAnswers = (props: ICompareAnswersProps): ICompareAnswersResu
       }
     }
   }
+
+  result.nameTest = nameTest
 
   return {
     result

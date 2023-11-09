@@ -6,7 +6,6 @@ interface IDynamicPaginationProps {
   onScrollEnd: () => void
   dataLength: number
   totalCount: number
-  limit: number
 }
 
 interface IPageProps extends HTMLAttributes<HTMLDivElement> {
@@ -35,7 +34,7 @@ export const Page: React.FC<IPageProps> = (props) => {
     if (dynamicPagination && element) {
       const { scrollHeight, scrollTop } = element
       if (scrollHeight - (scrollTop + window.innerHeight) < 100 &&
-          dynamicPagination.dataLength < dynamicPagination.totalCount + dynamicPagination.limit)
+          dynamicPagination.dataLength < dynamicPagination.totalCount)
         dynamicPagination.onScrollEnd()
     }
   }, [dynamicPagination])

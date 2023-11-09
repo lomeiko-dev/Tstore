@@ -1,6 +1,6 @@
 export type { IResultQuiz, IResultQuizScheme } from './model/types/result-quiz-scheme.ts'
 
-export { errorSelector, isLoadingSelector, resultQuizSelector, totalCountSelector } from './model/selectors/result-quiz-selectors.ts'
+export { errorSelector, isLoadingSelector, resultQuizSelector, totalCountSelector, limitSelector } from './model/selectors/result-quiz-selectors.ts'
 
 export { uploadResults, resultQuizReducer } from './model/slice/result-quiz-slice.ts'
 

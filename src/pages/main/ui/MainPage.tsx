@@ -7,8 +7,7 @@ import {
   quizReducer,
   quizzesSelector,
   totalCountSelector,
-  uploadQuizThunk,
-  limitSelector
+  uploadQuizThunk
 } from 'entities/quiz'
 import { useAppSelector } from 'shared/lib/hooks/useAppSelector.tsx'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
@@ -29,7 +28,6 @@ const MainPage = () => {
 
   const quizzes = useAppSelector(quizzesSelector)
   const totalCount = useAppSelector(totalCountSelector)
-  const limit = useAppSelector(limitSelector)
   const isLoading = useAppSelector(isLoadingSelector)
   const error = useAppSelector(errorSelector)
 
@@ -55,7 +53,6 @@ const MainPage = () => {
   return (
       <ReducerLoader reducers={reducers}>
           <Page dynamicPagination={{
-            limit: limit,
             onScrollEnd: fetchingData,
             totalCount: totalCount,
             dataLength: quizzes?.length ?? 0

@@ -243,124 +243,220 @@
   ],
   "result_quiz": [
     {
-      "percent_passing": 0,
+      "percent_passing": 1,
       "value_correct_answer": 0,
       "value_not_correct_answer": 0,
       "scores": 0,
       "id_user": 9,
+      "nameTest": "Паразитология",
       "id": 1
     },
     {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 2
-    },
-    {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 3
-    },
-    {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 4
-    },
-    {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 5
-    },
-    {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 6
-    },
-    {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 7
-    },
-    {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 8
-    },
-    {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 9
-    },
-    {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 10
-    },
-    {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 11
-    },
-    {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 12
-    },
-    {
-      "percent_passing": 0,
-      "value_correct_answer": 0,
-      "value_not_correct_answer": 0,
-      "scores": 0,
-      "id_user": 9,
-      "id": 13
-    },
-    {
-      "percent_passing": 100,
+      "percent_passing": 2,
       "value_correct_answer": 4,
       "value_not_correct_answer": 0,
       "scores": 5,
       "id_user": 9,
-      "id": 14
+      "nameTest": "Паразитология",
+      "id": 2
     },
     {
-      "percent_passing": 25,
-      "value_correct_answer": 1,
-      "value_not_correct_answer": 3,
-      "scores": 1,
+      "percent_passing": 3,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
       "id_user": 9,
-      "id": 15
+      "nameTest": "Паразитология",
+      "id": 1
+    },
+    {
+      "percent_passing": 4,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 2
+    },
+    {
+      "percent_passing": 5,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 1
+    },
+    {
+      "percent_passing": 6,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 2
+    },
+    {
+      "percent_passing": 7,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 1
+    },
+    {
+      "percent_passing": 8,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 2
+    },
+    {
+      "percent_passing": 9,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 1
+    },
+    {
+      "percent_passing": 10,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 2
+    },
+    {
+      "percent_passing": 11,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 1
+    },
+    {
+      "percent_passing": 12,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 2
+    },
+    {
+      "percent_passing": 13,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 1
+    },
+    {
+      "percent_passing": 14,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 2
+    },
+    {
+      "percent_passing": 15,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 1
+    },
+    {
+      "percent_passing": 16,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 2
+    },
+    {
+      "percent_passing": 17,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 1
+    },
+    {
+      "percent_passing": 18,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 2
+    },
+    {
+      "percent_passing": 19,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 1
+    },
+    {
+      "percent_passing": 20,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 2
+    },
+    {
+      "percent_passing": 21,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 1
+    },
+    {
+      "percent_passing": 22,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 2
+    },
+    {
+      "percent_passing": 23,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 1
+    },
+    {
+      "percent_passing": 24,
+      "value_correct_answer": 4,
+      "value_not_correct_answer": 0,
+      "scores": 5,
+      "id_user": 9,
+      "nameTest": "Паразитология",
+      "id": 2
     }
   ]
 }
