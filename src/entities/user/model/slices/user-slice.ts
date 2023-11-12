@@ -18,6 +18,7 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     usersReset (state) {
+      state.users = undefined
       state.page = 1
       state.sortQuery = ''
     },

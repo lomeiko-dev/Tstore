@@ -48,6 +48,7 @@ module.exports = {
         "@typescript-eslint/no-unused-vars": "off",
         "curly": "off",
         "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/array-type": "off",
         "object-shorthand": "off",
         "@typescript-eslint/no-invalid-void-type": "off",
         "react/jsx-indent": [2, 4]

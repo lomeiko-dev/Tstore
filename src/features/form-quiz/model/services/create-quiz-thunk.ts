@@ -12,6 +12,9 @@ export const createQuizThunk = createAsyncThunk<IQuiz | undefined, NavigateFunct
     const errors = errorsSelector(thunkAPI.getState())
 
     try {
+      if (quiz === undefined)
+        throw new Error('Данные тесты не найдены')
+        
       if (quiz?.name === '')
         throw new Error('Название теста не может быть пустым')
 
@@ -21,7 +24,15 @@ export const createQuizThunk = createAsyncThunk<IQuiz | undefined, NavigateFunct
       if (quiz?.questions.length === 0)
         throw new Error('В тесте должен быть как минимум 1 вопрос')
 
-      const response = await thunkAPI.extra.api.post<IQuiz>(QUIZ, quiz)
+      const currentDate = new Date().toISOString().slice(0, 10)
+
+      const newQuiz: IQuiz = {
+        id: '',
+        ...quiz,
+        dateCreate: String(currentDate)
+      }
+
+      const response = await thunkAPI.extra.api.post<IQuiz>(QUIZ, newQuiz)
 
       thunkAPI.dispatch(uploadQuizzes({
         data: [response.data],

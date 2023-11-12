@@ -27,6 +27,7 @@ export interface IQuiz {
 
 export interface IQuizScheme {
   quizzes: IQuiz[]
+  sortQuery: string
   totalCount: number
   page: number
   limit: number

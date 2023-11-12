@@ -1,10 +1,11 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { type IQuiz, type IQuizScheme } from '../types/quiz-scheme.ts'
 import { uploadQuizThunk } from '../services/upload-quiz-thunk.ts'
-import { getQuizThunk } from 'entities/quiz'
+import { getQuizThunk } from '../services/get-quiz-thunk.ts'
 
 const initialState: IQuizScheme = {
   quizzes: [],
+  sortQuery: '',
   totalCount: 0,
   page: 1,
   limit: 9,
@@ -19,6 +20,15 @@ const quizSlice = createSlice({
     uploadQuizzes (state, action: PayloadAction<{ data: IQuiz[], count: number }>) {
       state.quizzes = [...state.quizzes, ...action.payload.data]
       state.totalCount = action.payload.count
+    },
+    resetSorting: (state) => {
+      state.quizzes = []
+      state.page = 1
+      state.sortQuery = ''
+    },
+    updateSortQuery: (state, action: PayloadAction<string>) => {
+      state.quizzes = []
+      state.sortQuery = action.payload
     },
     incrementPage (state) {
       state.page += 1
@@ -57,4 +67,4 @@ const quizSlice = createSlice({
 })
 
 export const quizReducer = quizSlice.reducer
-export const { uploadQuizzes, incrementPage, removeQuiz } = quizSlice.actions
+export const { uploadQuizzes, incrementPage, removeQuiz, resetSorting, updateSortQuery } = quizSlice.actions

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 import { UserList } from './user-list/UserList.tsx'
-import { FormSearchedUser } from 'features/sorting-users'
+import { FormSearched } from 'features/searched-sorting'
 import { type IReducer, ReducerLoader } from 'shared/ui/reducer-loader'
 import { Page } from 'shared/ui/page'
 
@@ -9,9 +9,9 @@ import {
   errorSelector,
   isLoadingSelector,
   sortQuerySelector,
-  totalCountSelector,
+  totalCountSelector, updateSortQuery,
   uploadUsersThunk,
-  userReducer,
+  userReducer, usersReset,
   usersSelector
 } from 'entities/user'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
@@ -42,7 +42,9 @@ const UsersPage = () => {
   return (
       <ReducerLoader reducers={reducers}>
           <Page>
-              <FormSearchedUser/>
+              <FormSearched
+                  reset={() => dispatch(usersReset())}
+                  updateSortQuery={(value) => dispatch(updateSortQuery(`nickname_like=${value}&`))}/>
               <UserList
 					isLoading={isLoading} error={error}
 					data={users} totalCount={totalCount}

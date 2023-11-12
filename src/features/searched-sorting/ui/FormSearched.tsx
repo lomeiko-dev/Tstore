@@ -1,16 +1,23 @@
 import React, { useCallback, useState } from 'react'
-import style from './FormSearchedUsers.module.scss'
+import style from './FormSearched.module.scss'
 
 import { enumDesign, Field } from 'shared/ui/field'
-import { updateSortQuery, usersReset } from 'entities/user'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch.tsx'
 import { IconButton } from 'shared/ui/icon-button'
 
 import SearchedIcon from 'shared/assets/img/icons/search.svg?react'
 import ResetIcon from 'shared/assets/img/icons/reset.svg?react'
 
-export const FormSearchedUser = () => {
-  const dispatch = useAppDispatch()
+interface IFormSearched {
+  updateSortQuery: (value: string) => void
+  reset: () => void
+}
+
+export const FormSearched: React.FC<IFormSearched> = React.memo((props) => {
+  const {
+    reset,
+    updateSortQuery
+  } = props
+
   const [search, setSearch] = useState('')
 
   const updateSearchField = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,14 +25,16 @@ export const FormSearchedUser = () => {
   }
 
   const toggleSearched = useCallback(() => {
-    dispatch(usersReset())
-    dispatch(updateSortQuery(`nickname_like=${search}&`))
-  }, [search, dispatch])
+    if (search !== '') {
+      reset()
+      updateSortQuery(search)
+    }
+  }, [search])
 
   const resetSearched = useCallback(() => {
-    dispatch(usersReset())
+    reset()
     setSearch('')
-  }, [dispatch, setSearch])
+  }, [setSearch])
 
   return (
       <div className={style.form}>
@@ -37,7 +46,6 @@ export const FormSearchedUser = () => {
 
           <IconButton className={style.icon} defaultStyle={true} onClick={toggleSearched} Icon={SearchedIcon}/>
           <IconButton className={style.icon} onClick={resetSearched} Icon={ResetIcon}/>
-
       </div>
   )
-}
+})
