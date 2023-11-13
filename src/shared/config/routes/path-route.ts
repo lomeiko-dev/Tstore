@@ -15,7 +15,7 @@ interface typeRoute {
 }
 
 export const pathRoutes: Record<nameRoute, typeRoute> = {
-  [nameRoute.MAIN]: { name: '/main', config: '/main' },
+  [nameRoute.MAIN]: { name: '/main', config: '/main/:id?' },
   [nameRoute.ABOUT]: { name: '/about', config: '/about' },
   [nameRoute.AUTH]: { name: '/auth', config: 'auth' },
   [nameRoute.PROFILE]: { name: '/profile', config: '/profile/:id?' },

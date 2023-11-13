@@ -31,7 +31,7 @@ export const NavBar: React.FC<INavBarProps> = React.memo((props) => {
               <img className={style.icon} src={HomeIcon} alt=''/>
               <div>Главная</div>
           </Link>
-          <Link to={pathRoutes.main.name}>
+          <Link to={pathRoutes.main.name + `/${authData?.id}`}>
               <img className={style.icon} src={MyTestsIcon} alt=''/>
               <div>Мои тесты</div>
           </Link>

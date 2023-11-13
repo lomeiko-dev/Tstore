@@ -4,11 +4,11 @@ import { type IThunk } from 'app/providers/store'
 import { QUIZ } from 'shared/api/consts.ts'
 import { incrementPage, uploadQuizzes } from '../slice/quiz-slice.ts'
 
-export const uploadQuizThunk = createAsyncThunk<IQuiz[], void, IThunk>('quiz/upload',
-  async (_, thunkAPI) => {
+export const uploadQuizThunk = createAsyncThunk<IQuiz[], string | undefined, IThunk>('quiz/upload',
+  async (id, thunkAPI) => {
     const { page, limit, sortQuery } = thunkAPI.getState().quizReducer ?? {}
     try {
-      const response = await thunkAPI.extra.api.get(QUIZ + `?${sortQuery}_page=${page}&_limit=${limit}`)
+      const response = await thunkAPI.extra.api.get(QUIZ + `?${sortQuery}_page=${page}&_limit=${limit}${id && `&id_user=${id}`}`)
       thunkAPI.dispatch(uploadQuizzes({
         data: response.data,
         count: response.headers['x-total-count']

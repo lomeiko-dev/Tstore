@@ -24,6 +24,7 @@ import { pathRoutes } from 'shared/config/routes'
 import AddTestIcon from 'shared/assets/img/icons/add-test.svg?react'
 import { SortingDateCreate } from 'features/sorting-date-create'
 import { SortingQuizTheme, sortingQuizThemeReducer } from 'features/sorting-quiz-theme'
+import { useParams } from 'react-router-dom'
 
 const reducers: IReducer[] = [
   { storeKey: 'quizReducer', reducer: quizReducer, save: true },
@@ -41,13 +42,20 @@ const MainPage = () => {
 
   const [fetching, setFetching] = useState(true)
 
+  const { id } = useParams()
+
   useEffect(() => {
     setFetching(true)
   }, [sortQuery])
 
   useEffect(() => {
+    setFetching(true)
+    dispatch(resetSorting())
+  }, [id])
+
+  useEffect(() => {
     if (fetching) {
-      dispatch(uploadQuizThunk()).finally(() => {
+      dispatch(uploadQuizThunk(id)).finally(() => {
         setFetching(false)
       })
     }
