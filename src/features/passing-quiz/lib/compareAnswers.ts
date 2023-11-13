@@ -1,6 +1,5 @@
 import { IQuizQuestion } from 'entities/quiz'
-import { questionResult } from '../model/types/passing-quiz-scheme.ts'
-import { IResultQuiz } from 'entities/result-quiz'
+import { IResultQuiz, questionResult } from 'entities/result-quiz'
 import { getValueCorrectAnswer } from '../lib/getValueCorrectAnswer.ts'
 
 interface ICompareAnswersProps {
@@ -20,7 +19,9 @@ export const initialResult: IResultQuiz = {
   value_not_correct_answer: 0,
   scores: 0,
   id_user: '',
-  nameTest: ''
+  nameTest: '',
+  answers: [],
+  questions: []
 }
 
 export const compareAnswers = (props: ICompareAnswersProps): ICompareAnswersResult => {
@@ -53,6 +54,8 @@ export const compareAnswers = (props: ICompareAnswersProps): ICompareAnswersResu
   }
 
   result.nameTest = nameTest
+  result.answers = questionAnswers
+  result.questions = questions
 
   return {
     result

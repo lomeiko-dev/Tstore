@@ -1,4 +1,4 @@
-export type { IResultQuiz, IResultQuizScheme } from './model/types/result-quiz-scheme.ts'
+export type { IResultQuiz, IResultQuizScheme, questionResult } from './model/types/result-quiz-scheme.ts'
 
 export { errorSelector, isLoadingSelector, resultQuizSelector, totalCountSelector, limitSelector } from './model/selectors/result-quiz-selectors.ts'
 

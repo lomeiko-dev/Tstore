@@ -485,6 +485,74 @@
         }
       ],
       "id_user": 9
+    },
+    {
+      "id": 20,
+      "name": "тест",
+      "theme": "тест",
+      "icon": "",
+      "description": "",
+      "tags": "",
+      "dateCreate": "2023-11-13",
+      "questions": [
+        {
+          "question": "вопрос 1",
+          "answers": [
+            {
+              "answer": "1",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "2",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "3",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Вопрос 2",
+          "answers": [
+            {
+              "answer": "1",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "2",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "3",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id_user": 9
     }
   ],
   "result_quiz": [
@@ -703,6 +771,111 @@
       "id_user": 9,
       "nameTest": "Паразитология",
       "id": 2
+    },
+    {
+      "percent_passing": 0,
+      "value_correct_answer": 0,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "впвыпывпвып",
+      "answers": [
+        {
+          "answers": []
+        }
+      ],
+      "questions": [
+        {
+          "question": "",
+          "answers": [],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 3
+    },
+    {
+      "percent_passing": 100,
+      "value_correct_answer": 2,
+      "value_not_correct_answer": 0,
+      "scores": 0,
+      "id_user": 9,
+      "nameTest": "тест",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            false,
+            false,
+            true
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "вопрос 1",
+          "answers": [
+            {
+              "answer": "1",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "2",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "3",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Вопрос 2",
+          "answers": [
+            {
+              "answer": "1",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "2",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "3",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 4
     }
   ]
 }
