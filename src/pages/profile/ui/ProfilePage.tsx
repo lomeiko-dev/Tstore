@@ -24,7 +24,9 @@ import {
   resultQuizReducer,
   resultQuizSelector,
   totalCountSelector,
-  uploadResultQuizThunk
+  uploadResultQuizThunk,
+  isLoadingSelector as isLoadingSelectorResult,
+  errorSelector as errorSelectorResult
 } from 'entities/result-quiz'
 import { ResultList } from 'pages/profile/ui/result-list/ResultList.tsx'
 
@@ -41,15 +43,10 @@ const ProfilePage = () => {
   const { id = '' } = useParams()
   const navigate = useNavigate()
 
-  const [fetchingResult, setFetchingResult] = useState(false)
-
-  const uploadResults = () => {
-    dispatch(uploadResultQuizThunk(id))
-  }
+  const [fetchingResult, setFetchingResult] = useState(true)
 
   useEffect(() => {
     dispatch(uploadProfileThunk(id))
-    uploadResults()
   }, [dispatch, id])
 
   useEffect(() => {
@@ -60,6 +57,8 @@ const ProfilePage = () => {
 
   const results = useAppSelector(resultQuizSelector)
   const totalCount = useAppSelector(totalCountSelector)
+  const isLoadingResult = useAppSelector(isLoadingSelectorResult)
+  const errorResult = useAppSelector(errorSelectorResult)
 
   const profile = useAppSelector(profileSelector)
   const isLoading = useAppSelector(isLoadingSelectorProfile)
@@ -71,7 +70,7 @@ const ProfilePage = () => {
 
   const changeProfile = useCallback(() => {
     setChange(prevState => !prevState)
-  }, [dispatch, profile])
+  }, [])
 
   const logout = useCallback(() => {
     dispatch(removeAuthData())
@@ -100,7 +99,7 @@ const ProfilePage = () => {
 							onClose={onFlipFormHandler}/>}
 
               </Panel>
-              <ResultList results={results}/>
+              <ResultList results={results} isLoading={isLoadingResult} error={errorResult}/>
           </Page>
       </ReducerLoader>
   )

@@ -2,68 +2,63 @@
   "auth": [
     {
       "password": "34129078",
-      "username": "admin",
+      "username": "nikita@mail.ru",
       "id": 1
     },
     {
       "password": "34129078",
-      "username": "user124235325235",
+      "username": "borisJOY@mail.com",
       "id": 2
     },
     {
-      "password": "34129078",
-      "username": "user12423235225235",
+      "password": "324235235235",
+      "username": "SNGrigorievich@mail.ru",
       "id": 3
     },
     {
       "password": "34129078",
-      "username": "user346277422",
+      "username": "flot@mail.ru",
       "id": 4
     },
     {
       "password": "34129078",
-      "username": "user3125234657",
+      "username": "test@test.test",
       "id": 5
     },
     {
-      "password": "34129078",
-      "username": "tester228",
+      "password": "2352353463476",
+      "username": "alex@mail.ru",
       "id": 6
     },
     {
-      "password": "34129078",
-      "username": "Vanya",
+      "password": "2352353463476",
+      "username": "signal@mail.ru",
       "id": 7
     },
     {
-      "password": "33253253453242345",
-      "username": "Vadim2",
+      "password": "34129078",
+      "username": "Smit@mail.en",
       "id": 8
     },
     {
-      "password": "33253253453242345",
-      "username": "nEmEc",
+      "password": "34129078",
+      "username": "asfdsg@mail.rus",
       "id": 9
     },
     {
-      "password": "dfgl;df'mlkgl,dfgl,",
-      "username": "dsgsdgdsgsdg",
+      "password": "34129078",
+      "username": "lomieiko78@mail.ro",
       "id": 10
-    },
-    {
-      "password": "33253253453242345",
-      "username": "nEmEcвыавыафыафыа",
-      "id": 11
     }
   ],
   "profile": [
     {
       "authId": 1,
-      "avatar": "",
-      "status": "",
-      "description": "",
-      "nickname": "Никита",
-      "dateBirthday": "",
+      "avatar": "https://sun9-26.userapi.com/impg/_9dqeILfXrMDygIj0TFM3QVqGqfhwyGX6rIxjw/A6tGWs6ddAo.jpg?size=960x1280&quality=95&sign=a4bcb64a43868b2e32dfd678cbcc12c4&type=album",
+      "status": "Я являюсь создателем сайта 😎",
+      "description": "Я создатель данного продукта, если возникли какие либо ошибки, или баги во время использования этого сайта обращаться -> https://vk.com/id390878963",
+      "nickname": "Nikita🕶",
+      "dateBirthday": "2006-06-13",
       "id": 1
     },
     {
@@ -71,8 +66,8 @@
       "avatar": "",
       "status": "",
       "description": "",
-      "nickname": "Вася1",
-      "dateBirthday": "",
+      "nickname": "Борис Иванович",
+      "dateBirthday": "1978-04-12",
       "id": 2
     },
     {
@@ -80,8 +75,8 @@
       "avatar": "",
       "status": "",
       "description": "",
-      "nickname": "Антон",
-      "dateBirthday": "",
+      "nickname": "Семоченко Николай",
+      "dateBirthday": "1971-05-31",
       "id": 3
     },
     {
@@ -89,8 +84,8 @@
       "avatar": "",
       "status": "",
       "description": "",
-      "nickname": "Вадим",
-      "dateBirthday": "",
+      "nickname": "Максимильян",
+      "dateBirthday": "2005-12-13",
       "id": 4
     },
     {
@@ -98,8 +93,8 @@
       "avatar": "",
       "status": "",
       "description": "",
-      "nickname": "Севан",
-      "dateBirthday": "",
+      "nickname": "Тестировщик",
+      "dateBirthday": "2012-12-12",
       "id": 5
     },
     {
@@ -107,7 +102,7 @@
       "avatar": "",
       "status": "",
       "description": "",
-      "nickname": "TESTER",
+      "nickname": "Алексей Вторников",
       "dateBirthday": "",
       "id": 6
     },
@@ -116,7 +111,7 @@
       "avatar": "",
       "status": "",
       "description": "",
-      "nickname": "ваня1",
+      "nickname": "Karl Liki",
       "dateBirthday": "",
       "id": 7
     },
@@ -125,16 +120,16 @@
       "avatar": "",
       "status": "",
       "description": "",
-      "nickname": "Вадим2",
+      "nickname": "Smit Jonson",
       "dateBirthday": "",
       "id": 8
     },
     {
       "authId": 9,
       "avatar": "",
-      "status": "dsgdsgdsgdflghmdojkg",
-      "description": "ывпзвыпщшвапощывпвапвпаыывпзвыпщшвапощывпвапвпаыывпзвыпщшвапощывпвапвпаыывпзвыпщшвапощывпвапвпаыывпзвыпщшвапощывпвапвпаыывпзвыпщшвапощывпвапвпаыывпзвыпщшвапощывпsdgdsgk;dfgjdfkgdffklgjdsgkdlsjkdsgjdsk",
-      "nickname": "Лоaвып",
+      "status": "",
+      "description": "",
+      "nickname": "Артём",
       "dateBirthday": "",
       "id": 9
     },
@@ -143,57 +138,363 @@
       "avatar": "",
       "status": "",
       "description": "",
-      "nickname": "Никитосик",
+      "nickname": "Никита Ломейко",
       "dateBirthday": "",
       "id": 10
-    },
-    {
-      "authId": 11,
-      "avatar": "",
-      "status": "",
-      "description": "",
-      "nickname": "фыафыафыафыафыа",
-      "dateBirthday": "",
-      "id": 11
     }
   ],
   "quiz": [
     {
       "id": 1,
-      "name": "тест 1",
-      "theme": "",
-      "icon": "",
-      "description": "",
-      "tags": "",
-      "dateCreate": "2023-11-13",
+      "name": "Frontend",
+      "theme": "Программирование",
+      "icon": "https://static.tildacdn.com/tild6364-3062-4132-a661-343931616437/image.png",
+      "description": "Тест для начинающих frontend-разработчиков",
+      "tags": "#программирование #front-end",
+      "dateCreate": "2023-11-15",
       "questions": [
         {
-          "question": "",
-          "answers": [],
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
           "illustrations": [],
           "url": ""
         }
       ],
-      "id_user": 9
-    },
-    {
-      "id": 2,
-      "name": "ыафыафыафыафыа",
-      "theme": "",
-      "icon": "",
-      "description": "",
-      "tags": "",
-      "dateCreate": "2023-11-13",
-      "questions": [
-        {
-          "question": "",
-          "answers": [],
-          "illustrations": [],
-          "url": ""
-        }
-      ],
-      "id_user": 11
+      "id_user": 10
     }
   ],
-  "result_quiz": []
+  "result_quiz": [
+    {
+      "percent_passing": 100,
+      "value_correct_answer": 3,
+      "value_not_correct_answer": 0,
+      "scores": 4,
+      "id_user": 10,
+      "nameTest": "Frontend",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            false,
+            false,
+            true
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 1
+    },
+    {
+      "percent_passing": 100,
+      "value_correct_answer": 3,
+      "value_not_correct_answer": 0,
+      "scores": 4,
+      "id_user": 10,
+      "nameTest": "Frontend",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            false,
+            false,
+            true
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 2
+    }
+  ]
 }

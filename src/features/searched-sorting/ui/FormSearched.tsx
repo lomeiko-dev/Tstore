@@ -32,9 +32,11 @@ export const FormSearched: React.FC<IFormSearched> = React.memo((props) => {
   }, [search])
 
   const resetSearched = useCallback(() => {
-    reset()
-    setSearch('')
-  }, [setSearch])
+    if (search !== '') {
+      reset()
+      setSearch('')
+    }
+  }, [search])
 
   return (
       <div className={style.form}>

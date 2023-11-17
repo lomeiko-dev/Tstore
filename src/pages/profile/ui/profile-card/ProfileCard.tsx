@@ -17,7 +17,7 @@ interface IProfileCardProps {
   error?: string
 }
 
-export const ProfileCard: React.FC<IProfileCardProps> = props => {
+export const ProfileCard: React.FC<IProfileCardProps> = React.memo((props) => {
   const {
     profile,
     isLoading,
@@ -40,4 +40,4 @@ export const ProfileCard: React.FC<IProfileCardProps> = props => {
           </>}
       </div>
   )
-}
+})

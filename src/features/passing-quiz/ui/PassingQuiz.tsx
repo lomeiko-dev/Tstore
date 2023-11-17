@@ -31,7 +31,7 @@ interface IPassingQuizProps {
   error?: string
 }
 
-export const PassingQuiz: React.FC<IPassingQuizProps> = (props) => {
+export const PassingQuiz: React.FC<IPassingQuizProps> = React.memo((props) => {
   const {
     questions = [],
     error,
@@ -105,4 +105,4 @@ export const PassingQuiz: React.FC<IPassingQuizProps> = (props) => {
               <TextButton className={style.btn} typed={typedButton.DEFAULT} onClick={backHandler}>На главную</TextButton>
           </Modal>
       </div>)
-}
+})

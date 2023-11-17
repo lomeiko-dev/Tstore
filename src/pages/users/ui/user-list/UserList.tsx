@@ -35,6 +35,10 @@ export const UserList: React.FC<IUserListProps> = React.memo(props => {
   } = props
 
   let result: React.ReactNode
+  const navigate = useNavigate()
+  const navigateProfileHandler = (userId: string) => {
+    navigate(pathRoutes.profile.name + `/${userId}`)
+  }
 
   if (isLoading) {
     result = SkeletonContainer
@@ -46,11 +50,6 @@ export const UserList: React.FC<IUserListProps> = React.memo(props => {
 
   if (data === undefined) {
     return
-  }
-
-  const navigate = useNavigate()
-  const navigateProfileHandler = (userId: string) => {
-    navigate(pathRoutes.profile.name + `/${userId}`)
   }
 
   return (

@@ -43,17 +43,22 @@ export const AuthForm: React.FC<IAuthFormProps> = React.memo(({ className }) => 
 					color='#fff'
 					placeholderColorScheme='light'
 					className={style.field}
-					onChange={updateUsernameHandler} type='text' placeholder='login' value={username}/>
+					onChange={updateUsernameHandler}
+                    type='text'
+                    placeholder='login' value={username}/>
               <Field
 					color='#fff'
 					placeholderColorScheme='light'
 					className={style.field}
-					onChange={updatePasswordHandler} type='password' placeholder='password' value={password}/>
+					onChange={updatePasswordHandler}
+                    type='password'
+                    placeholder='password' value={password}/>
 
               <TextButton
 					className={style.btn}
 					bgColor='#ffffff'
-					disabled={isLoading} onClick={authHandler}>Авторизация</TextButton>
+					disabled={isLoading}
+                    onClick={authHandler}>Авторизация</TextButton>
           </div>
       </AuthContainer>
   )

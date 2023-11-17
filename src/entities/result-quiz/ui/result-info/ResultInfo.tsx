@@ -10,7 +10,7 @@ interface IResultInfoProps extends IResultProps {
   error?: string
 }
 
-export const ResultInfo: React.FC<IResultInfoProps> = (props) => {
+export const ResultInfo: React.FC<IResultInfoProps> = React.memo((props) => {
   const {
     nameTest,
     percent_passing,
@@ -48,4 +48,4 @@ export const ResultInfo: React.FC<IResultInfoProps> = (props) => {
           <Text className={style.text}>{scores} балл/ов</Text>
       </div>
   )
-}
+})

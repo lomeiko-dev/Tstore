@@ -18,6 +18,9 @@ export const createQuizThunk = createAsyncThunk<IQuiz | undefined, NavigateFunct
       if (quiz?.name === '')
         throw new Error('Название теста не может быть пустым')
 
+      if (quiz?.theme === '')
+        throw new Error('Тема теста не может быть пустым')
+
       if (JSON.stringify(errors) !== JSON.stringify([undefined, undefined, undefined]))
         throw new Error()
 

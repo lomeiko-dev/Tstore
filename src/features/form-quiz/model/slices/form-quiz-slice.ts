@@ -38,7 +38,7 @@ const formQuizSlice = createSlice({
     },
     changeQuizTheme (state, action: PayloadAction<string>) {
       if (state.quizDetails.theme.length > 30) {
-        state.errorThemeQuiz = 'Тема теста не может быть больше 30 символов'
+        state.errorThemeQuiz = 'Тема теста больше 30 символов'
       } else {
         state.errorThemeQuiz = undefined
       }

@@ -15,7 +15,6 @@ export const uploadResultQuizThunk = createAsyncThunk<IResultQuiz[], string, ITh
         data: response.data,
         count: response.headers['x-total-count']
       }))
-      console.log('хай хай хай')
 
       thunkAPI.dispatch(incrementPage())
 

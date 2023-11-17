@@ -7,7 +7,7 @@ import { TextButton, typedButton } from 'shared/ui/text-button'
 
 import { useNavigate } from 'react-router-dom'
 
-import { IQuizCardProps } from 'entities/quiz'
+import { IQuizCardProps } from '../QuizCard.tsx'
 import { pathRoutes } from 'shared/config/routes'
 
 export const QuizInfo: React.FC<IQuizCardProps> = React.memo((props) => {

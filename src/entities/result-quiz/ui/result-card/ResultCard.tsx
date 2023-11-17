@@ -3,13 +3,13 @@ import style from './ResultCard.module.scss'
 
 import { displayPanel, Panel, styledPanel, typedPanel } from 'shared/ui/panel'
 import { styledText, Text } from 'shared/ui/text'
-
-import { IResultProps } from '../types/result-props.ts'
 import { TextButton, typedButton } from 'shared/ui/text-button'
 import { Modal } from 'shared/ui/modal'
 import { FormProgressMotion } from '../form-progress-motion/FormProgressMotion.tsx'
 
-export const ResultCard: React.FC<IResultProps> = (props) => {
+import { IResultProps } from '../types/result-props.ts'
+
+export const ResultCard: React.FC<IResultProps> = React.memo((props) => {
   const {
     value_not_correct_answer,
     percent_passing,
@@ -47,4 +47,4 @@ export const ResultCard: React.FC<IResultProps> = (props) => {
           </Modal>
       </Panel>
   )
-}
+})

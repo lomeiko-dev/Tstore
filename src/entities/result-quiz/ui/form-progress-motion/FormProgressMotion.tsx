@@ -10,7 +10,7 @@ interface IFormProgressMotionProps {
   answers: questionResult[]
 }
 
-export const FormProgressMotion: React.FC<IFormProgressMotionProps> = (props) => {
+export const FormProgressMotion: React.FC<IFormProgressMotionProps> = React.memo((props) => {
   const {
     answers,
     questions
@@ -22,10 +22,13 @@ export const FormProgressMotion: React.FC<IFormProgressMotionProps> = (props) =>
   return (
       <div className={style.form}>
           {questions.map((question, indexQuestion) => (<>
-              <Text className={style.question} styled={styledText.DESCRIPTION}>{question.question}</Text>
+              <Text key={indexQuestion} className={style.question} styled={styledText.DESCRIPTION}>{question.question}</Text>
               {question.answers.map((answer, indexAnswer) =>
-                  <Panel className={answers[indexQuestion].answers[indexAnswer] ? style.correct : style.not_correct} key={answer.answer}>{answer.answer}</Panel>)}
+                  <Panel
+                      className={answers[indexQuestion].answers[indexAnswer]
+                        ? style.correct
+                        : style.not_correct} key={indexQuestion}>{answer.answer}</Panel>)}
           </>))}
       </div>
   )
-}
+})
