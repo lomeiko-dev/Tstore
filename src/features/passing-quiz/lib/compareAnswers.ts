@@ -13,17 +13,6 @@ interface ICompareAnswersResult {
   error?: string
 }
 
-export const initialResult: IResultQuiz = {
-  percent_passing: 0,
-  value_correct_answer: 0,
-  value_not_correct_answer: 0,
-  scores: 0,
-  id_user: '',
-  nameTest: '',
-  answers: [],
-  questions: []
-}
-
 export const compareAnswers = (props: ICompareAnswersProps): ICompareAnswersResult => {
   const {
     questionAnswers,
@@ -31,7 +20,16 @@ export const compareAnswers = (props: ICompareAnswersProps): ICompareAnswersResu
     nameTest
   } = props
 
-  const result: IResultQuiz = initialResult
+  const result: IResultQuiz = {
+    percent_passing: 0,
+    value_correct_answer: 0,
+    value_not_correct_answer: 0,
+    scores: 0,
+    id_user: '',
+    nameTest: '',
+    answers: [],
+    questions: [] 
+  }
 
   const valueCorrectAnswer = getValueCorrectAnswer(questions)
 

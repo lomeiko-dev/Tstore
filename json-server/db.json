@@ -495,6 +495,1122 @@
         }
       ],
       "id": 2
+    },
+    {
+      "percent_passing": 100,
+      "value_correct_answer": 3,
+      "value_not_correct_answer": 0,
+      "scores": 4,
+      "id_user": 10,
+      "nameTest": "Frontend",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            false,
+            false,
+            true
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 3
+    },
+    {
+      "percent_passing": 100,
+      "value_correct_answer": 3,
+      "value_not_correct_answer": 0,
+      "scores": 4,
+      "id_user": 10,
+      "nameTest": "Frontend",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            false,
+            false,
+            true
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 4
+    },
+    {
+      "percent_passing": 200.00000000000003,
+      "value_correct_answer": 6,
+      "value_not_correct_answer": 0,
+      "scores": 8,
+      "id_user": 10,
+      "nameTest": "Frontend",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            false,
+            false,
+            true
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 5
+    },
+    {
+      "percent_passing": 300,
+      "value_correct_answer": 9,
+      "value_not_correct_answer": 0,
+      "scores": 12,
+      "id_user": 10,
+      "nameTest": "Frontend",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            false,
+            false,
+            true
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 6
+    },
+    {
+      "percent_passing": 100,
+      "value_correct_answer": 3,
+      "value_not_correct_answer": 0,
+      "scores": 4,
+      "id_user": 10,
+      "nameTest": "Frontend",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            false,
+            false,
+            true
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 7
+    },
+    {
+      "percent_passing": 66.66666666666667,
+      "value_correct_answer": 2,
+      "value_not_correct_answer": 1,
+      "scores": 3,
+      "id_user": 10,
+      "nameTest": "Frontend",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 8
+    },
+    {
+      "percent_passing": 166.66666666666669,
+      "value_correct_answer": 5,
+      "value_not_correct_answer": 1,
+      "scores": 7,
+      "id_user": 10,
+      "nameTest": "Frontend",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            false,
+            false,
+            true
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 9
+    },
+    {
+      "percent_passing": 66.66666666666667,
+      "value_correct_answer": 2,
+      "value_not_correct_answer": 1,
+      "scores": 3,
+      "id_user": 10,
+      "nameTest": "Frontend",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 10
+    },
+    {
+      "percent_passing": 66.66666666666667,
+      "value_correct_answer": 2,
+      "value_not_correct_answer": 1,
+      "scores": 3,
+      "id_user": 10,
+      "nameTest": "Frontend",
+      "answers": [
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "answers": [
+            true,
+            false,
+            false
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Что такое HTML",
+          "answers": [
+            {
+              "answer": "это стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            },
+            {
+              "answer": "это язык программирования для написания пользовательского интерфейса",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "Свод тегов для вывода текста на сайтах",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Укажите на какой из картинок выведен синтаксис HTML",
+          "answers": [
+            {
+              "answer": "",
+              "illustrations": [
+                "https://russia-dropshipping.ru/800/600/https/i1.wp.com/www.bohyunkim.net/blog/wp-content/uploads/2014/08/html.png"
+              ],
+              "isCorrect": true,
+              "url": "",
+              "score": 2
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://typelish.com/c/ErAQRGr"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "",
+              "illustrations": [
+                "https://spemer.com/img/works/favicon/setFavicons.png"
+              ],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        },
+        {
+          "question": "Какой инструмент используется для стилизации html",
+          "answers": [
+            {
+              "answer": "xml",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "js",
+              "illustrations": [],
+              "isCorrect": false,
+              "url": "",
+              "score": 0
+            },
+            {
+              "answer": "css",
+              "illustrations": [],
+              "isCorrect": true,
+              "url": "",
+              "score": 1
+            }
+          ],
+          "illustrations": [],
+          "url": ""
+        }
+      ],
+      "id": 11
     }
   ]
 }

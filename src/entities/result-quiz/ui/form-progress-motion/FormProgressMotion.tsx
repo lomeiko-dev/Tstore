@@ -27,7 +27,7 @@ export const FormProgressMotion: React.FC<IFormProgressMotionProps> = React.memo
                   <Panel
                       className={answers[indexQuestion].answers[indexAnswer]
                         ? style.correct
-                        : style.not_correct} key={indexQuestion}>{answer.answer}</Panel>)}
+                        : style.not_correct} key={indexQuestion}>{answer.answer === '' ? indexAnswer + 1 : answer.answer}</Panel>)}
           </>))}
       </div>
   )
